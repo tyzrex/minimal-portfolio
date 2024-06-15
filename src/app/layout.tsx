@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
+import ColorModeProvider from "@/provider/ThemeProvider";
+import Navbar from "@/components/globals/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const averta = localFont({
+  src: "../fonts/averta/averta.woff2",
+  variable: "--font-averta",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={averta.className}>
+        <ColorModeProvider>
+          <Navbar />
+          {children}
+        </ColorModeProvider>
+      </body>
     </html>
   );
 }
