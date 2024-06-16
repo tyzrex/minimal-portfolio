@@ -107,7 +107,7 @@ export default function HeroSection() {
                 "
                 className="w-full"
               >
-                <div className="flex items-start justify-start w-full h-full bg-primary text-white dark:bg-white text-black border rounded-lg flex-col p-4">
+                <div className="flex items-start justify-start w-full h-full  dark:bg-white text-black border rounded-lg flex-col p-4">
                   <div className="flex items-start gap-2 justify-start flex-col sm:flex-row">
                     <p>sb@devstudio:~$</p>
                     <p className="flex items-center">
