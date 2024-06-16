@@ -99,7 +99,8 @@ export default function HeroSection() {
                       <span>
                         <span className="sm:hidden">{">"}</span>
                         {/* command for emailing in gmail*/}
-                        echo "Contact me at" && echo "sulavbaral58@gmail.com"
+                        echo &quot;Contact me at&quot; && echo
+                        &quot;sulavbaral58@gmail.com&quot;
                       </span>
                     </p>
                   </div>
