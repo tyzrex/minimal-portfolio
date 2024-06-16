@@ -14,12 +14,14 @@ export default function ExperienceSection() {
           <div className="bg-white border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
             <SectionSubHeader
               title="eParamarsha Inc"
-              icon={<BriefcaseMedical size={40} />}
+              icon={<BriefcaseMedical className="md:h-8 md:w-8" />}
             />
 
             <div className="flex flex-col gap-5">
               <div>
-                <p className="text-lg md:text-2xl">Junior Frontend Developer</p>
+                <p className="text-[16px] md:text-2xl">
+                  Junior Frontend Developer
+                </p>
                 <p className="text-sm">December 2023 - Present</p>
               </div>
 
@@ -40,12 +42,14 @@ export default function ExperienceSection() {
           <div className="bg-white border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
             <SectionSubHeader
               title="Fatafat Sewa"
-              icon={<ShoppingBag size={40} />}
+              icon={<ShoppingBag className="md:h-8 md:w-8" />}
             />
 
             <div className="flex flex-col gap-5">
               <div>
-                <p className="text-lg md:text-2xl">NextJS Frontend Developer</p>
+                <p className="text-[16px] md:text-2xl">
+                  NextJS Frontend Developer
+                </p>
                 <p className="text-sm">December 2023 - Present</p>
               </div>
 

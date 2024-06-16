@@ -14,7 +14,7 @@ export default function EducationSection() {
           <div className="border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
             <SectionSubHeader
               title="Prime College"
-              icon={<Building size={40} />}
+              icon={<Building className="md:h-8 md:w-8" />}
             />
 
             <div className="flex flex-col gap-5">
@@ -33,7 +33,7 @@ export default function EducationSection() {
               title="
             Trinity International College
             "
-              icon={<Building2Icon size={40} />}
+              icon={<Building2Icon className="md:h-8 md:w-8" />}
             />
 
             <div className="flex flex-col gap-5">
