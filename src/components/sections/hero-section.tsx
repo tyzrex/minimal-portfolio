@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 export default function HeroSection() {
   return (
     <>
-      <section className="h-auto border-t-[1px] md:border-b ">
+      <section className="h-autos md:border-b ">
         <div className="grid grid-cols-1 xl:grid-cols-2 ">
           <div className="md:border-r-2 p-0 xl:p-10 relative flex flex-col gap-10 items-center justify-center order-last xl:order-first">
             <div className="grid grid-cols-2 xl:grid-rows-2 w-full h-full xl:absolute xl:top-0 xl:left-0 xl:-z-10">
@@ -40,7 +40,7 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-            <aside className="flex flex-col items-center justify-center w-full order-first">
+            <aside className="flex flex-col items-center justify-center w-full order-first hidden">
               <div className="flex items-start justify-start w-full xl:w-fit h-full bg-primary dark:bg-black/60 dark:text-white text-primary-foreground border rounded-lg flex-col p-5">
                 <div className="flex gap-2 items-center">
                   <div
@@ -72,16 +72,9 @@ export default function HeroSection() {
           </div>
           <div className="flex flex-col gap-10 xl:p-16 my-10 xl:my-0">
             <div className="flex flex-col xl:mx-auto">
-              <h1 className="hero-typography">Hi i am sulav baral</h1>
+              <h1 className="hero-typography">hi i am sulav baral</h1>
               <h2 className="hero-typography">
-                I am a{" "}
-                <FlipWords
-                  words={["developer", "student", "creator", "dreamer"]}
-                  duration={3000}
-                  className="hero-typography"
-                />
-                <br />
-                from Kathmandu, Nepal.
+                frontend developer from kathmandu, nepal.
               </h2>
             </div>
 

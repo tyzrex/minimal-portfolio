@@ -31,13 +31,13 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
-
+    --text-gradient: linear-gradient(180deg, #000000, #363636);
     --radius: 0.5rem;
   }
 
   .dark {
     --background: 0 0% 6%;
-    --foreground: 0 0% 100%;
+    --foreground: 0 0% 93%;
 
     --card: 0 0% 13%;
     --card-foreground: 0 0% 98%;
@@ -63,6 +63,7 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
+    --text-gradient: linear-gradient(180deg, #fff, #adadad);
   }
 }
 
@@ -73,6 +74,12 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.text-gradient {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body {
@@ -89,19 +96,19 @@ body {
 
 @layer components {
   .hero-typography {
-    @apply text-4xl md:text-7xl xl:text-7xl xl:leading-[1.125] text-start averta-bold;
+    @apply text-4xl md:text-6xl xl:text-6xl xl:leading-[1.125] text-start averta-bold text-gradient;
   }
 
   .hero-typography-normal {
-    @apply text-3xl md:text-7xl;
+    @apply text-3xl md:text-6xl;
   }
 
   .section-title-typography {
-    @apply text-3xl md:text-4xl uppercase averta-semibold mb-5 md:mb-10;
+    @apply text-3xl md:text-4xl xl:text-[45px] uppercase averta-semibold mb-5 md:mb-10;
   }
 
   .section-p-typography {
-    @apply text-lg md:text-xl md:leading-8 font-normal;
+    @apply text-[14px] leading-relaxed md:text-[20px] md:leading-8;
   }
 
   .sub-section-title-typography {
