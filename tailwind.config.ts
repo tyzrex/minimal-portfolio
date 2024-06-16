@@ -19,6 +19,11 @@ const config = {
     },
     extend: {
       colors: {
+        "accent-blue": "#a9daf5",
+        "accent-green": "#b3deca",
+        "accent-yellow": "#fbffd3",
+        "accent-purple": "#abafdb",
+        "accent-orange": "#f5a192",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
