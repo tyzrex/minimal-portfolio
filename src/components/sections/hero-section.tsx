@@ -58,7 +58,7 @@ export default function HeroSection() {
                 {/* terminal text */}
                 <div className="flex items-center gap-2 mt-4 justify-start">
                   <p className="">sb@devstudio:~$</p>
-                  <p className="">echo "Hello, World"</p>
+                  <p className="">echo &quot;Hello, World&quot;</p>
 
                   <div
                     className="flex items-center justify-center w-1 h-4 bg-white animate-blink 
