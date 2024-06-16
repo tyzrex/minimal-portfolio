@@ -85,7 +85,7 @@
   }
 
   .section-title-typography {
-    @apply text-3xl md:text-7xl xl:text-7xl font-bold mb-5 md:mb-10;
+    @apply text-4xl md:text-7xl xl:text-7xl font-bold mb-5 md:mb-10;
   }
 
   .section-p-typography {
