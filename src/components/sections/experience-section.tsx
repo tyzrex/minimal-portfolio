@@ -33,7 +33,7 @@ export default function ExperienceSection() {
             </div>
           </div>
 
-          <div className="bg-accent-blue dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
+          <div className="bg-accent-green dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
             <SectionSubHeader title="Fatafat Sewa" />
 
             <div className="flex flex-col gap-5">

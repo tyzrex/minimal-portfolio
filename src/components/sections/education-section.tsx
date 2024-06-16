@@ -10,7 +10,7 @@ export default function EducationSection() {
         <SectionHeader title="education" />
 
         <div className="grid lg:grid-cols-2 gap-5 dark:text-black">
-          <div className="bg-accent-blue dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
+          <div className="bg-accent-purple dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
             <SectionSubHeader title="Prime College" />
 
             <div className="flex flex-col gap-5">
@@ -24,7 +24,7 @@ export default function EducationSection() {
             </div>
           </div>
 
-          <div className="bg-accent-blue dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
+          <div className="bg-accent-yellow dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
             <SectionSubHeader
               title="
             Trinity International College

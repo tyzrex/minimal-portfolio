@@ -41,7 +41,7 @@ export default function HeroSection() {
               </div>
             </div>
             <aside className="flex flex-col items-center justify-center w-full order-first">
-              <div className="flex items-start justify-start w-full xl:w-fit h-full bg-primary dark:bg-black/60 dark:text-white text-primary-foreground border rounded-lg flex-col py-5 px-10">
+              <div className="flex items-start justify-start w-full xl:w-fit h-full bg-primary dark:bg-black/60 dark:text-white text-primary-foreground border rounded-lg flex-col p-5">
                 <div className="flex gap-2 items-center">
                   <div
                     className="rounded-full w-4 h-4 animate-bounce
@@ -60,11 +60,6 @@ export default function HeroSection() {
                 <div className="flex items-center gap-2 mt-4 justify-start">
                   <p className="">sb@devstudio:~$</p>
                   <p className="">echo &quot;Hello, World&quot;</p>
-
-                  <div
-                    className="flex items-center justify-center w-1 h-4 bg-white animate-blink 
-                  "
-                  ></div>
                 </div>
                 <div className="flex items-center gap-2 justify-start">
                   <p className="">sb@devstudio:~$</p>
