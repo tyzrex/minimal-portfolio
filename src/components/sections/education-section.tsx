@@ -1,3 +1,4 @@
+import { Building, Building2Icon } from "lucide-react";
 import WordBadge from "../atoms/word-badge";
 import SectionHeader from "../reusables/section-header";
 import SectionSubHeader from "../reusables/section-sub-header";
@@ -10,8 +11,11 @@ export default function EducationSection() {
         <SectionHeader title="education" />
 
         <div className="grid lg:grid-cols-2 gap-5 dark:text-black">
-          <div className="bg-accent-purple dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
-            <SectionSubHeader title="Prime College" />
+          <div className="border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
+            <SectionSubHeader
+              title="Prime College"
+              icon={<Building size={40} />}
+            />
 
             <div className="flex flex-col gap-5">
               <div>
@@ -24,11 +28,12 @@ export default function EducationSection() {
             </div>
           </div>
 
-          <div className="bg-accent-yellow dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
+          <div className="border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
             <SectionSubHeader
               title="
             Trinity International College
             "
+              icon={<Building2Icon size={40} />}
             />
 
             <div className="flex flex-col gap-5">

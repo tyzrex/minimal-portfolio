@@ -1,3 +1,4 @@
+import { BriefcaseMedical, ShoppingBag } from "lucide-react";
 import WordBadge from "../atoms/word-badge";
 import SectionHeader from "../reusables/section-header";
 import SectionSubHeader from "../reusables/section-sub-header";
@@ -10,8 +11,11 @@ export default function ExperienceSection() {
         <SectionHeader title="experience" />
 
         <div className="grid lg:grid-cols-2 gap-5 dark:text-black">
-          <div className="bg-accent-blue dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
-            <SectionSubHeader title="eParamarsha Inc" />
+          <div className="bg-white border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
+            <SectionSubHeader
+              title="eParamarsha Inc"
+              icon={<BriefcaseMedical size={40} />}
+            />
 
             <div className="flex flex-col gap-5">
               <div>
@@ -33,8 +37,11 @@ export default function ExperienceSection() {
             </div>
           </div>
 
-          <div className="bg-accent-green dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
-            <SectionSubHeader title="Fatafat Sewa" />
+          <div className="bg-white border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
+            <SectionSubHeader
+              title="Fatafat Sewa"
+              icon={<ShoppingBag size={40} />}
+            />
 
             <div className="flex flex-col gap-5">
               <div>
