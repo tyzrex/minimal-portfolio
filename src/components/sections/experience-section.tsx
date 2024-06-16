@@ -10,7 +10,7 @@ export default function ExperienceSection() {
         <SectionHeader title="experience" />
 
         <div className="grid lg:grid-cols-2 gap-5 dark:text-black">
-          <div className="bg-accent-blue rounded-2xl p-5 md:p-10">
+          <div className="bg-accent-blue dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
             <SectionSubHeader title="eParamarsha Inc" />
 
             <div className="flex flex-col gap-5">
@@ -24,16 +24,16 @@ export default function ExperienceSection() {
                 <p className="text-sm">June 2023 - November 2023</p>
               </div>
               <p className="md:flex items-center gap-2 flex-wrap hidden">
-                <WordBadge word="react" variant={"dark"} />
-                <WordBadge variant={"dark"} word="typescript" />
-                <WordBadge variant={"dark"} word="redux" />
-                <WordBadge variant={"dark"} word="material-ui" />
-                <WordBadge variant={"dark"} word="flutter" />
+                <WordBadge word="react" variant={"light"} />
+                <WordBadge variant={"light"} word="typescript" />
+                <WordBadge variant={"light"} word="redux" />
+                <WordBadge variant={"light"} word="material-ui" />
+                <WordBadge variant={"light"} word="flutter" />
               </p>
             </div>
           </div>
 
-          <div className="bg-accent-green rounded-2xl p-5 md:p-10">
+          <div className="bg-accent-blue dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
             <SectionSubHeader title="Fatafat Sewa" />
 
             <div className="flex flex-col gap-5">
@@ -43,11 +43,11 @@ export default function ExperienceSection() {
               </div>
 
               <p className="hidden md:flex items-center gap-2 flex-wrap">
-                <WordBadge variant={"dark"} word="react" />
-                <WordBadge variant={"dark"} word="nextjs" />
-                <WordBadge variant={"dark"} word="tailwindcss" />
-                <WordBadge variant={"dark"} word="shadcn-ui" />
-                <WordBadge variant={"dark"} word="docker" />
+                <WordBadge variant={"light"} word="react" />
+                <WordBadge variant={"light"} word="nextjs" />
+                <WordBadge variant={"light"} word="tailwindcss" />
+                <WordBadge variant={"light"} word="shadcn-ui" />
+                <WordBadge variant={"light"} word="docker" />
               </p>
             </div>
           </div>

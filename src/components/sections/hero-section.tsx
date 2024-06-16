@@ -41,7 +41,7 @@ export default function HeroSection() {
               </div>
             </div>
             <aside className="flex flex-col items-center justify-center w-full order-first">
-              <div className="flex items-start justify-start w-full xl:w-fit h-full bg-primary text-primary-foreground border rounded-lg flex-col py-5 px-10">
+              <div className="flex items-start justify-start w-full xl:w-fit h-full bg-primary dark:bg-black/60 dark:text-white text-primary-foreground border rounded-lg flex-col py-5 px-10">
                 <div className="flex gap-2 items-center">
                   <div
                     className="rounded-full w-4 h-4 animate-bounce
@@ -92,7 +92,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col items-center justify-end gap-5">
               <Link href="/contact" className="w-full">
-                <div className="flex items-start justify-start w-full h-full bg-accent-green text-black rounded-lg flex-col p-4">
+                <div className="flex items-start justify-start w-full h-full bg-accent-green dark:bg-transparent dark:border text-black dark:text-white rounded-lg flex-col p-4">
                   <div className="flex items-start gap-2 justify-start flex-col sm:flex-row">
                     <p>sb@devstudio:~$</p>
                     <p className="flex items-center">
@@ -111,7 +111,7 @@ export default function HeroSection() {
                 "
                 className="w-full"
               >
-                <div className="flex items-start justify-start w-full h-full bg-accent-blue text-black border rounded-lg flex-col p-4">
+                <div className="flex items-start justify-start w-full h-full bg-accent-blue dark:bg-white text-black border rounded-lg flex-col p-4">
                   <div className="flex items-start gap-2 justify-start flex-col sm:flex-row">
                     <p>sb@devstudio:~$</p>
                     <p className="flex items-center">
