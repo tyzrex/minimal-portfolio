@@ -1,4 +1,5 @@
 import { FlipWords } from "../molecules/flip-words";
+import { Button } from "../ui/button";
 
 export default function HeroSection() {
   return (
@@ -38,8 +39,8 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-            <aside className="flex flex-col items-center justify-center w-full">
-              <div className="flex items-start justify-start w-full md:w-fit h-24 bg-primary text-primary-foreground border rounded-lg flex-col p-5">
+            <aside className="flex flex-col items-center justify-center w-full order-first">
+              <div className="flex items-start justify-start w-full md:w-fit h-full bg-primary text-primary-foreground border rounded-lg flex-col p-5">
                 <div className="flex gap-2 items-center">
                   <div
                     className="rounded-full w-4 h-4 animate-bounce
@@ -58,15 +59,22 @@ export default function HeroSection() {
                 <div className="flex items-center gap-2 mt-4 justify-start">
                   <p className="">sb@devstudio:~$</p>
                   <p className="">echo "Hello, World"</p>
+
                   <div
                     className="flex items-center justify-center w-1 h-4 bg-white animate-blink 
                   "
                   ></div>
                 </div>
+                <div className="flex items-center gap-2 justify-start">
+                  <p className="">sb@devstudio:~$</p>
+                  <p className="">
+                    <span className="text-red-500">cat</span> sulav-baral/
+                  </p>
+                </div>
               </div>
             </aside>
           </div>
-          <div className="flex flex-col mx-auto p-0 md:p-24 my-5 md:my-10">
+          <div className="flex flex-col mx-auto py-5 md:p-24 my-5 md:my-10">
             <h1 className="hero-typography">Hi i am sulav baral</h1>
             <h2 className="hero-typography">
               I am a{" "}
