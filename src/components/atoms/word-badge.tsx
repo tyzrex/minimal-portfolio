@@ -1,9 +1,30 @@
-export default function WordBadge({ word }: { word: string }) {
+import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
+
+const badgeVariants = cva(
+  "border text-xs md:text-sm font-semibold uppercase py-2 px-5 rounded-full",
+  {
+    variants: {
+      variant: {
+        light:
+          "text-[#222222] border-[#222222] dark:text-white dark:border-white",
+        dark: "text-[#222222] border-[#222222]",
+      },
+    },
+    defaultVariants: {
+      variant: "dark",
+    },
+  }
+);
+
+export interface BadgeProps extends VariantProps<typeof badgeVariants> {
+  word: string;
+}
+
+export default function WordBadge(props: BadgeProps) {
   return (
-    <>
-      <span className="border border-primary text-lg py-2 px-4 rounded-full">
-        {word}
-      </span>
-    </>
+    <span className={cn(badgeVariants({ variant: props.variant }))}>
+      {props.word}
+    </span>
   );
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FlipWords } from "../molecules/flip-words";
 import { Button } from "../ui/button";
 
@@ -6,7 +7,7 @@ export default function HeroSection() {
     <>
       <section className="h-auto border-t-[1px] md:border-b ">
         <div className="grid grid-cols-1 xl:grid-cols-2 ">
-          <div className="md:border-r-2 p-0 md:p-10 relative flex flex-col gap-10 items-center justify-center order-last xl:order-first">
+          <div className="md:border-r-2 p-0 xl:p-10 relative flex flex-col gap-10 items-center justify-center order-last xl:order-first">
             <div className="grid grid-cols-2 xl:grid-rows-2 w-full h-full xl:absolute xl:top-0 xl:left-0 xl:-z-10">
               <div className="border-r-2 border-b-2 h-full w-full p-5 ">
                 <div className="flex items-center justify-center h-full w-full ">
@@ -40,7 +41,7 @@ export default function HeroSection() {
               </div>
             </div>
             <aside className="flex flex-col items-center justify-center w-full order-first">
-              <div className="flex items-start justify-start w-full md:w-fit h-full bg-primary text-primary-foreground border rounded-lg flex-col p-5">
+              <div className="flex items-start justify-start w-full xl:w-fit h-full bg-primary text-primary-foreground border rounded-lg flex-col py-5 px-10">
                 <div className="flex gap-2 items-center">
                   <div
                     className="rounded-full w-4 h-4 animate-bounce
@@ -68,24 +69,62 @@ export default function HeroSection() {
                 <div className="flex items-center gap-2 justify-start">
                   <p className="">sb@devstudio:~$</p>
                   <p className="">
-                    <span className="text-red-500">cat</span> sulav-baral/
+                    <span className="text-red-500">cat</span> sulav-baral.ts
                   </p>
                 </div>
               </div>
             </aside>
           </div>
-          <div className="flex flex-col mx-auto py-5 md:p-24 my-5 md:my-10">
-            <h1 className="hero-typography">Hi i am sulav baral</h1>
-            <h2 className="hero-typography">
-              I am a{" "}
-              <FlipWords
-                words={["developer", "student", "creator", "dreamer"]}
-                duration={3000}
-                className="hero-typography"
-              />
-              <br />
-              from Kathmandu, Nepal.
-            </h2>
+          <div className="flex flex-col gap-10 xl:p-16 my-10 xl:my-0">
+            <div className="flex flex-col xl:mx-auto">
+              <h1 className="hero-typography">Hi i am sulav baral</h1>
+              <h2 className="hero-typography">
+                I am a{" "}
+                <FlipWords
+                  words={["developer", "student", "creator", "dreamer"]}
+                  duration={3000}
+                  className="hero-typography"
+                />
+                <br />
+                from Kathmandu, Nepal.
+              </h2>
+            </div>
+
+            <div className="flex flex-col items-center justify-end gap-5">
+              <Link href="/contact" className="w-full">
+                <div className="flex items-start justify-start w-full h-full bg-accent-green text-black rounded-lg flex-col p-4">
+                  <div className="flex items-start gap-2 justify-start flex-col sm:flex-row">
+                    <p>sb@devstudio:~$</p>
+                    <p className="flex items-center">
+                      <span>
+                        <span className="sm:hidden">{">"}</span>
+                        {/* command for emailing in gmail*/}
+                        echo "Contact me at" && echo "sulavbaral58@gmail.com"
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </Link>
+              <Link
+                href="
+              https://sulavbaral.com.np/resume
+                "
+                className="w-full"
+              >
+                <div className="flex items-start justify-start w-full h-full bg-accent-blue text-black border rounded-lg flex-col p-4">
+                  <div className="flex items-start gap-2 justify-start flex-col sm:flex-row">
+                    <p>sb@devstudio:~$</p>
+                    <p className="flex items-center">
+                      <span>
+                        <span className="sm:hidden">{">"}</span>
+                        curl -o sulav-baral-cv.pdf
+                        https://sulavbaral.com.np/resume
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

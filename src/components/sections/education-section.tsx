@@ -9,7 +9,7 @@ export default function EducationSection() {
       <SectionWrapper>
         <SectionHeader title="education" />
 
-        <div className="grid lg:grid-cols-2 gap-5">
+        <div className="grid lg:grid-cols-2 gap-5 dark:text-black">
           <div className="bg-accent-yellow rounded-2xl p-10">
             <SectionSubHeader title="Prime College" />
 

@@ -36,8 +36,8 @@
   }
 
   .dark {
-    --background: 0 0% 13%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
     --card: 0 0% 13%;
     --card-foreground: 0 0% 98%;
@@ -75,25 +75,38 @@
   }
 }
 
+body {
+  font-family: var(--font-averta);
+}
+
+.averta-semibold {
+  font-family: var(--font-averta-semibold);
+}
+
+.averta-bold {
+  font-family: var(--font-averta-bold);
+}
+
 @layer components {
   .hero-typography {
-    @apply text-4xl md:text-7xl xl:text-7xl font-bold;
+    @apply text-4xl md:text-7xl xl:text-7xl xl:leading-[1.125] text-start averta-bold;
   }
 
   .hero-typography-normal {
-    @apply text-3xl md:text-7xl  font-normal;
+    @apply text-3xl md:text-7xl;
   }
 
   .section-title-typography {
-    @apply text-4xl md:text-7xl xl:text-7xl font-bold mb-5 md:mb-10;
+    @apply text-3xl md:text-4xl uppercase averta-semibold mb-5 md:mb-10;
   }
 
   .section-p-typography {
-    @apply text-xl md:text-2xl xl:text-3xl font-normal;
+    @apply text-lg md:text-xl md:leading-8 font-normal;
   }
 
   .sub-section-title-typography {
-    @apply text-3xl md:text-5xl xl:text-5xl font-normal mb-5 md:mb-10;
+    @apply text-xl md:text-2xl xl:text-3xl averta-semibold
+    mb-5;
   }
 }
 

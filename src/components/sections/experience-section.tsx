@@ -9,45 +9,45 @@ export default function ExperienceSection() {
       <SectionWrapper>
         <SectionHeader title="experience" />
 
-        <div className="grid lg:grid-cols-2 gap-5">
-          <div className="bg-accent-blue rounded-2xl p-10">
+        <div className="grid lg:grid-cols-2 gap-5 dark:text-black">
+          <div className="bg-accent-blue rounded-2xl p-5 md:p-10">
             <SectionSubHeader title="eParamarsha Inc" />
 
             <div className="flex flex-col gap-5">
               <div>
-                <p className="text-2xl">Junior Frontend Developer</p>
-                <p>December 2023 - Present</p>
+                <p className="text-lg md:text-2xl">Junior Frontend Developer</p>
+                <p className="text-sm">December 2023 - Present</p>
               </div>
 
               <div>
-                <p className="text-2xl">Frontend Developer Intern</p>
-                <p>June 2023 - November 2023</p>
+                <p className="text-lg md:text-2xl">Frontend Developer Intern</p>
+                <p className="text-sm">June 2023 - November 2023</p>
               </div>
               <p className="md:flex items-center gap-2 flex-wrap hidden">
-                <WordBadge word="react" />
-                <WordBadge word="typescript" />
-                <WordBadge word="redux" />
-                <WordBadge word="material-ui" />
-                <WordBadge word="flutter" />
+                <WordBadge word="react" variant={"dark"} />
+                <WordBadge variant={"dark"} word="typescript" />
+                <WordBadge variant={"dark"} word="redux" />
+                <WordBadge variant={"dark"} word="material-ui" />
+                <WordBadge variant={"dark"} word="flutter" />
               </p>
             </div>
           </div>
 
-          <div className="bg-accent-green rounded-2xl p-10">
+          <div className="bg-accent-green rounded-2xl p-5 md:p-10">
             <SectionSubHeader title="Fatafat Sewa" />
 
             <div className="flex flex-col gap-5">
               <div>
-                <p className="text-2xl">NextJS Frontend Developer</p>
-                <p>December 2023 - Present</p>
+                <p className="text-lg md:text-2xl">NextJS Frontend Developer</p>
+                <p className="text-sm">December 2023 - Present</p>
               </div>
 
               <p className="hidden md:flex items-center gap-2 flex-wrap">
-                <WordBadge word="react" />
-                <WordBadge word="nextjs" />
-                <WordBadge word="tailwindcss" />
-                <WordBadge word="shadcn-ui" />
-                <WordBadge word="docker" />
+                <WordBadge variant={"dark"} word="react" />
+                <WordBadge variant={"dark"} word="nextjs" />
+                <WordBadge variant={"dark"} word="tailwindcss" />
+                <WordBadge variant={"dark"} word="shadcn-ui" />
+                <WordBadge variant={"dark"} word="docker" />
               </p>
             </div>
           </div>
