@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./globals.scss";
 import localFont from "next/font/local";
 import ColorModeProvider from "@/provider/ThemeProvider";
 import Navbar from "@/components/globals/navbar";

@@ -1,6 +1,7 @@
 import { useTheme } from "next-themes";
 import MaxWidthWrapper from "../wrappers/max-width-wrapper";
 import ThemeSwitcher from "../atoms/theme-switcher";
+import BurgerMenu from "../molecules/burger-menu";
 export default function Navbar() {
   return (
     <>
@@ -12,6 +13,9 @@ export default function Navbar() {
             <ul className="flex space-x-4 text-2xl items-center">
               <li>
                 <ThemeSwitcher />
+              </li>
+              <li>
+                <BurgerMenu />
               </li>
             </ul>
           </nav>

@@ -72,10 +72,9 @@ export default function HeroSection() {
           </div>
           <div className="flex flex-col gap-10 xl:p-16 my-10 xl:my-0">
             <div className="flex flex-col xl:mx-auto">
-              <h1 className="hero-typography">hi i am sulav baral</h1>
-              <h2 className="hero-typography">
-                frontend developer from kathmandu, nepal.
-              </h2>
+              <h1 className="hero-typography">
+                hi i am sulav baral frontend developer from kathmandu, nepal.
+              </h1>
             </div>
 
             <div className="flex flex-col items-center justify-end gap-5">
