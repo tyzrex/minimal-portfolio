@@ -3,6 +3,7 @@ import "./globals.scss";
 import localFont from "next/font/local";
 import ColorModeProvider from "@/provider/ThemeProvider";
 import Navbar from "@/components/globals/navbar";
+import LenisWrapper from "@/components/wrappers/lenis-wrapper";
 
 const averta = localFont({
   src: "../fonts/averta/id-averta-2.woff",
@@ -34,10 +35,12 @@ export default function RootLayout({
       <body
         className={`${averta.variable} ${avertaSemibold.variable} ${avertaBold.variable}`}
       >
-        <ColorModeProvider>
-          <Navbar />
-          {children}
-        </ColorModeProvider>
+        <LenisWrapper>
+          <ColorModeProvider>
+            <Navbar />
+            {children}
+          </ColorModeProvider>
+        </LenisWrapper>
       </body>
     </html>
   );
