@@ -3,6 +3,7 @@ import WordBadge from "../atoms/word-badge";
 import SectionHeader from "../reusables/section-header";
 import SectionSubHeader from "../reusables/section-sub-header";
 import SectionWrapper from "../wrappers/section-wrapper";
+import { BorderBeam } from "../molecules/border-bean";
 
 export default function EducationSection() {
   return (
@@ -11,10 +12,11 @@ export default function EducationSection() {
         <SectionHeader title="education" />
 
         <div className="grid lg:grid-cols-2 gap-5 dark:text-black">
-          <div className="border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
+          <div className="bg-white border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10 relative overflow-hidden">
+            <BorderBeam size={250} duration={12} delay={9} />
             <SectionSubHeader
               title="Prime College"
-              icon={<Building className="md:h-8 md:w-8" />}
+              icon={<Building className="md:h-8 md:w-8 text-accent-red" />}
             />
 
             <div className="flex flex-col gap-5">
@@ -28,12 +30,13 @@ export default function EducationSection() {
             </div>
           </div>
 
-          <div className="border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10">
+          <div className="border dark:bg-transparent dark:text-white dark:border rounded-2xl p-5 md:p-10 relative overflow-hidden">
+            <BorderBeam size={250} duration={12} delay={3} />
             <SectionSubHeader
               title="
             Trinity International College
             "
-              icon={<Building2Icon className="md:h-8 md:w-8" />}
+              icon={<Building2Icon className="md:h-8 md:w-8 text-accent-red" />}
             />
 
             <div className="flex flex-col gap-5">

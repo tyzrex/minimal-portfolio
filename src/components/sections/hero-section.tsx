@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { FlipWords } from "../molecules/flip-words";
 import { Button } from "../ui/button";
+import { BorderBeam } from "../molecules/border-bean";
 
 export default function HeroSection() {
   return (
     <>
-      <section className="h-autos md:border-b ">
+      <section className="h-autos md:border-b">
+        <div></div>
         <div className="grid grid-cols-1 xl:grid-cols-2 ">
           <div className="md:border-r-2 p-0 xl:p-10 relative flex flex-col gap-10 items-center justify-center order-last xl:order-first">
             <div className="grid grid-cols-2 xl:grid-rows-2 w-full h-full xl:absolute xl:top-0 xl:left-0 xl:-z-10">
@@ -13,7 +15,9 @@ export default function HeroSection() {
                 <div className="flex items-center justify-center h-full w-full ">
                   <span className="hero-typography-normal">s</span>
                   <span className="hero-typography-normal">b</span>
-                  <span className="hero-typography-normal">.</span>
+                  <span className="hero-typography-normal text-accent-red">
+                    .
+                  </span>
                 </div>
               </div>
               <div className="border-b-2 h-full w-full p-5">
@@ -73,7 +77,10 @@ export default function HeroSection() {
           <div className="flex flex-col gap-10 xl:p-16 my-10 xl:my-0">
             <div className="flex flex-col xl:mx-auto">
               <h1 className="hero-typography">
-                hi i am sulav baral frontend developer from kathmandu, nepal.
+                <span className="text-gradient">
+                  hi i am sulav baral frontend developer from kathmandu, nepal
+                </span>
+                <span className="text-accent-red">.</span>
               </h1>
             </div>
 
@@ -84,9 +91,10 @@ export default function HeroSection() {
                     <p>sb@devstudio:~$</p>
                     <p className="flex items-center">
                       <span>
-                        <span className="sm:hidden">{">"}</span>
+                        <span className="sm:hidden">{"> "}</span>
                         {/* command for emailing in gmail*/}
-                        echo &quot;Contact me at&quot; && echo
+                        echo &quot;Contact me at&quot;{" "}
+                        <span className="text-accent-red">&&</span> echo
                         &quot;sulavbaral58@gmail.com&quot;
                       </span>
                     </p>
@@ -99,14 +107,14 @@ export default function HeroSection() {
                 "
                 className="w-full"
               >
-                <div className="flex items-start justify-start w-full h-full  dark:bg-white text-black border rounded-lg flex-col p-4">
+                <div className="flex items-start justify-start w-full h-full  text-black dark:text-white border rounded-lg flex-col p-4">
                   <div className="flex items-start gap-2 justify-start flex-col sm:flex-row">
                     <p>sb@devstudio:~$</p>
                     <p className="flex items-center">
                       <span>
-                        <span className="sm:hidden">{">"}</span>
-                        curl -o sulav-baral-cv.pdf
-                        https://sulavbaral.com.np/resume
+                        <span className="sm:hidden">{"> "}</span>
+                        curl <span className="text-accent-red">-o</span>{" "}
+                        sulav-baral-cv.pdf https://sulavbaral.com.np/resume
                       </span>
                     </p>
                   </div>

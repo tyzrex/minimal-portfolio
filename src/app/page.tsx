@@ -3,6 +3,7 @@ import AboutSection from "@/components/sections/about-section";
 import EducationSection from "@/components/sections/education-section";
 import ExperienceSection from "@/components/sections/experience-section";
 import HeroSection from "@/components/sections/hero-section";
+import { Photos } from "@/components/sections/parallex-photos";
 import ProjectSection from "@/components/sections/projects-section";
 import SkillSection from "@/components/sections/skills-section";
 import MaxWidthWrapper from "@/components/wrappers/max-width-wrapper";
@@ -27,6 +28,7 @@ export default function Home() {
         <EducationSection />
         <SkillSection />
         <ProjectSection />
+        <Photos />
       </MaxWidthWrapper>
     </main>
   );

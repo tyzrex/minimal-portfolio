@@ -9,15 +9,5 @@ export default function LenisWrapper({
 }) {
   const lenis = useLenis(({ scroll }) => {});
 
-  return (
-    <ReactLenis
-      root
-      options={{
-        lerp: 0.08,
-        smoothWheel: true,
-      }}
-    >
-      {children}
-    </ReactLenis>
-  );
+  return <ReactLenis root>{children}</ReactLenis>;
 }
