@@ -24,6 +24,7 @@ const config = {
         "accent-yellow": "#fbffd3",
         "accent-purple": "#abafdb",
         "accent-orange": "#f5a192",
+        "accent-red": "#d5211b",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -72,6 +73,11 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
         "spin-around": {
           "0%": {
             transform: "translateZ(0) rotate(0)",
@@ -98,6 +104,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         slide: "slide var(--speed) ease-in-out infinite alternate",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
     },
   },
