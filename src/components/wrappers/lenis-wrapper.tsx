@@ -16,7 +16,7 @@ export default function LenisWrapper({
         // infinite: true,
         lerp: 0.07,
         touchInertiaMultiplier: 0.5,
-        touchMultiplier: 3,
+        // touchMultiplier: 3,
       }}
     >
       {children}
