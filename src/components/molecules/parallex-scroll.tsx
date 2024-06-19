@@ -27,10 +27,8 @@ export default function ScrollGallery(props: ScrollGalleryProps) {
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
   useEffect(() => {
-    const lenis = new Lenis();
-
     const raf = (time: any) => {
-      lenis.raf(time);
+      //   lenis.raf(time);
       requestAnimationFrame(raf);
     };
 

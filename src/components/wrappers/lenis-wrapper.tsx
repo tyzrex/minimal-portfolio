@@ -7,7 +7,19 @@ export default function LenisWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  const lenis = useLenis(({ scroll }) => {});
-
-  return <ReactLenis root>{children}</ReactLenis>;
+  return (
+    <ReactLenis
+      root
+      options={{
+        syncTouch: true,
+        smoothWheel: true,
+        // infinite: true,
+        lerp: 0.07,
+        touchInertiaMultiplier: 0.5,
+        touchMultiplier: 3,
+      }}
+    >
+      {children}
+    </ReactLenis>
+  );
 }
