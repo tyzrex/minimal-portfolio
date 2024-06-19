@@ -52,6 +52,15 @@
 .imageContainer {
   position: absolute;
   padding: 20px 30px;
+
+  @media screen and (max-width: 800px) {
+    padding: 15px 25px;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 10px 20px;
+  }
+
   img {
     object-fit: cover;
   }
@@ -60,7 +69,14 @@
     width: 300px;
     top: 40vh;
     z-index: 3;
+
+    @media screen and (max-width: 800px) {
+      left: 3%;
+      width: 275px;
+    }
+
     @media screen and (max-width: 450px) {
+      left: 0;
       width: 200px;
     }
   }
@@ -74,9 +90,15 @@
     width: 300px;
     top: 40vh;
     z-index: 3;
+
+    @media screen and (max-width: 800px) {
+      right: 3%;
+      width: 275px;
+    }
+
     @media screen and (max-width: 450px) {
       width: 200px;
-      //zoom: 0.8;
+      right: 0;
     }
   }
 }

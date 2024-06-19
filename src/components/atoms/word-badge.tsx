@@ -19,12 +19,19 @@ const badgeVariants = cva(
 
 export interface BadgeProps extends VariantProps<typeof badgeVariants> {
   word: string;
+  icon?: React.ReactNode;
 }
 
 export default function WordBadge(props: BadgeProps) {
   return (
-    <span className={cn(badgeVariants({ variant: props.variant }))}>
-      {props.word}
+    <span
+      className={cn(
+        badgeVariants({ variant: props.variant }),
+        "flex items-center "
+      )}
+    >
+      {props.icon}
+      <span>{props.word}</span>
     </span>
   );
 }
