@@ -8,9 +8,9 @@ import { Instagram } from "lucide-react";
 import { Suspense } from "react";
 
 cloudinary.v2.config({
-  cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
-  api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
 });
 
 async function getAllCloudinaryPhotos() {
@@ -55,7 +55,7 @@ export async function Photos() {
             love to capture moments in my phone and my 10 year old camera. I
             also create small reels about life, travels and cafe hopping.
           </p>
-          <div className="flex items-center gap-5 mt-5">
+          <div className="flex items-center gap-5 mt-5 flex-col md:flex-row">
             <Link
               prefetch={false}
               href="https://www.instagram.com/sb.dio/"
