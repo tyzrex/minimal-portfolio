@@ -48,3 +48,35 @@
 .spacer {
   height: 100vh;
 }
+
+.imageContainer {
+  position: absolute;
+  padding: 20px 30px;
+  img {
+    object-fit: cover;
+  }
+  &:nth-of-type(1) {
+    left: 5%;
+    width: 300px;
+    top: 40vh;
+    z-index: 3;
+    @media screen and (max-width: 450px) {
+      width: 200px;
+    }
+  }
+  &:nth-of-type(2) {
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  &:nth-of-type(3) {
+    right: 5%;
+    width: 300px;
+    top: 40vh;
+    z-index: 3;
+    @media screen and (max-width: 450px) {
+      width: 200px;
+      //zoom: 0.8;
+    }
+  }
+}

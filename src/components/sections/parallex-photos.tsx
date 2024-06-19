@@ -55,7 +55,7 @@ export async function Photos() {
             love to capture moments in my phone and my 10 year old camera. I
             also create small reels about life, travels and cafe hopping.
           </p>
-          <div className="flex items-center gap-5 mt-5 flex-col md:flex-row">
+          <div className="flex md:items-center gap-5 mt-5 flex-col md:flex-row">
             <Link
               prefetch={false}
               href="https://www.instagram.com/sb.dio/"
