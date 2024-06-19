@@ -8,9 +8,9 @@ import { Instagram } from "lucide-react";
 import { Suspense } from "react";
 
 cloudinary.v2.config({
-  cloud_name: "dl0ophuc8",
-  api_key: "297472654332774",
-  api_secret: "Zw-6PVXDHtkm2yU1vcqz5U82UQk",
+  cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+  api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
 });
 
 async function getAllCloudinaryPhotos() {

@@ -14,8 +14,8 @@ export default function LenisWrapper({
         syncTouch: true,
         smoothWheel: true,
         // infinite: true,
-        lerp: 0.07,
-        touchInertiaMultiplier: 0.5,
+        // lerp: 0.07,
+        // touchInertiaMultiplier: 0.5,
         // touchMultiplier: 3,
       }}
     >
