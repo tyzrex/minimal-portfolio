@@ -99,10 +99,10 @@ const minorProjects = [
     description:
       "A collection of TailwindCSS components for my personal use for faster development",
     techs: [
-      <SiNextdotjs size={18} />,
-      <SiReact size={18} />,
-      <SiTypescript size={18} />,
-      <SiTailwindcss size={18} />,
+      <SiNextdotjs size={18} key={crypto.randomUUID()} />,
+      <SiReact size={18} key={crypto.randomUUID()} />,
+      <SiTypescript size={18} key={crypto.randomUUID()} />,
+      <SiTailwindcss size={18} key={crypto.randomUUID()} />,
     ],
     images: "tyz-ui.png",
   },
@@ -112,10 +112,10 @@ const minorProjects = [
     description:
       "Digital Version of Scavenger Hunt a QR based game which is a fun starter for events",
     techs: [
-      <SiNextdotjs size={18} />,
-      <SiTailwindcss size={18} />,
-      <SiPostgresql size={18} />,
-      <SiPrisma size={18} />,
+      <SiNextdotjs size={18} key={crypto.randomUUID()} />,
+      <SiTailwindcss size={18} key={crypto.randomUUID()} />,
+      <SiPostgresql size={18} key={crypto.randomUUID()} />,
+      <SiPrisma size={18} key={crypto.randomUUID()} />,
     ],
     images: "scanvenger.png",
   },
@@ -124,10 +124,10 @@ const minorProjects = [
     description:
       "Official Landing Page for Hackaverse Genesis Event happening soon in 2024",
     techs: [
-      <SiReact size={18} />,
-      <SiTypescript size={18} />,
-      <SiShadcnui size={18} />,
-      <SiVercel size={18} />,
+      <SiReact size={18} key={crypto.randomUUID()} />,
+      <SiTypescript size={18} key={crypto.randomUUID()} />,
+      <SiShadcnui size={18} key={crypto.randomUUID()} />,
+      <SiVercel size={18} key={crypto.randomUUID()} />,
     ],
     images: "hackaverse.png",
   },
@@ -136,10 +136,10 @@ const minorProjects = [
     description:
       "Collection of old questions for CSIT with some features such as marking questions",
     techs: [
-      <SiFlask size={18} />,
-      <SiPython size={18} />,
-      <SiJavascript size={18} />,
-      <SiTailwindcss size={18} />,
+      <SiFlask size={18} key={crypto.randomUUID()} />,
+      <SiPython size={18} key={crypto.randomUUID()} />,
+      <SiJavascript size={18} key={crypto.randomUUID()} />,
+      <SiTailwindcss size={18} key={crypto.randomUUID()} />,
     ],
     images: "oldqsnsite.png",
   },
