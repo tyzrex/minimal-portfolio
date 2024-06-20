@@ -9,7 +9,7 @@ export default function MinorProjectCards({
 }: {
   name: string;
   description: string;
-  techs: React.ReactNode[];
+  techs: any[];
   image: string;
 }) {
   return (
