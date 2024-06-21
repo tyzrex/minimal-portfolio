@@ -1,3 +1,4 @@
+import Footer from "@/components/globals/footer";
 import { VelocityScroll } from "@/components/molecules/velocity-words";
 import AboutSection from "@/components/sections/about-section";
 import EducationSection from "@/components/sections/education-section";
@@ -32,6 +33,7 @@ export default function Home() {
         {/* <GithubContributions /> */}
         <Photos />
       </MaxWidthWrapper>
+      <Footer />
     </main>
   );
 }
