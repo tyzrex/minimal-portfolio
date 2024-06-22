@@ -50,7 +50,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${averta.variable} ${avertaSemibold.variable} ${avertaBold.variable}`}
+        className={
+          averta.variable +
+          " " +
+          avertaSemibold.variable +
+          " " +
+          avertaBold.variable
+        }
       >
         <LenisWrapper>
           <ColorModeProvider>

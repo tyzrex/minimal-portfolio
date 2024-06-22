@@ -8,6 +8,7 @@ import HeroSection from "@/components/sections/hero-section";
 import { Photos } from "@/components/sections/parallex-photos";
 import ProjectSection from "@/components/sections/projects-section";
 import SkillSection from "@/components/sections/skills-section";
+import Socials from "@/components/sections/socials";
 import MaxWidthWrapper from "@/components/wrappers/max-width-wrapper";
 
 export default function Home() {
@@ -30,8 +31,8 @@ export default function Home() {
         <EducationSection />
         <SkillSection />
         <ProjectSection />
-        {/* <GithubContributions /> */}
         <Photos />
+        <Socials />
       </MaxWidthWrapper>
       <Footer />
     </main>

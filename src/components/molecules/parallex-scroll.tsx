@@ -37,10 +37,26 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
     return () => window.removeEventListener("resize", resize);
   }, []);
 
-  const firstPart = useMemo(() => images.slice(0, 7), [images]);
-  const secondPart = useMemo(() => images.slice(8, 14), [images]);
-  const thirdPart = useMemo(() => images.slice(15, 21), [images]);
-  const fourthPart = useMemo(() => images.slice(22, 29), [images]);
+  const randomisedImages = useMemo(() => {
+    return images.sort(() => Math.random() - 0.5);
+  }, [images]);
+
+  const firstPart = useMemo(
+    () => randomisedImages.slice(0, 7),
+    [randomisedImages]
+  );
+  const secondPart = useMemo(
+    () => randomisedImages.slice(8, 14),
+    [randomisedImages]
+  );
+  const thirdPart = useMemo(
+    () => randomisedImages.slice(15, 21),
+    [randomisedImages]
+  );
+  const fourthPart = useMemo(
+    () => randomisedImages.slice(22, 29),
+    [randomisedImages]
+  );
 
   const handleIntersection = useCallback((entries: any) => {
     entries.forEach((entry: any) => {
@@ -80,6 +96,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               animate={{ opacity: visibleImages.has(el.url) ? 1 : 0 }}
               transition={{ duration: 0.5 }}
               data-src={el.url}
+              className="relative"
             >
               <Image
                 src={el.url}
@@ -103,6 +120,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               animate={{ opacity: visibleImages.has(el.url) ? 1 : 0 }}
               transition={{ duration: 0.5 }}
               data-src={el.url}
+              className="relative"
             >
               <Image
                 src={el.url}
@@ -126,6 +144,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               animate={{ opacity: visibleImages.has(el.url) ? 1 : 0 }}
               transition={{ duration: 0.5 }}
               data-src={el.url}
+              className="relative"
             >
               <Image
                 src={el.url}
@@ -148,6 +167,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               animate={{ opacity: visibleImages.has(el.url) ? 1 : 0 }}
               transition={{ duration: 0.5 }}
               data-src={el.url}
+              className="relative"
             >
               <Image
                 src={el.url}
@@ -170,6 +190,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               animate={{ opacity: visibleImages.has(el.url) ? 1 : 0 }}
               transition={{ duration: 0.5 }}
               data-src={el.url}
+              className="relative"
             >
               <Image
                 src={el.url}
@@ -192,6 +213,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               animate={{ opacity: visibleImages.has(el.url) ? 1 : 0 }}
               transition={{ duration: 0.5 }}
               data-src={el.url}
+              className="relative"
             >
               <Image
                 src={el.url}
@@ -206,7 +228,6 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
           ))}
         </div>
       </div>
-      <div className={styles.spacer}></div>
     </>
   );
 };
