@@ -53,9 +53,6 @@ importers:
       react-dom:
         specifier: ^18
         version: 18.3.1(react@18.3.1)
-      react-github-calendar:
-        specifier: ^4.1.5
-        version: 4.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       sass:
         specifier: ^1.77.5
         version: 1.77.5
@@ -482,9 +479,6 @@ packages:
   '@tsconfig/recommended@1.0.6':
     resolution: {integrity: sha512-0IKu9GHYF1NGTJiYgfWwqnOQSlnE9V9R7YohHNNf0/fj/SyOZWzdd06JFr0fLpg1Mqw0kGbYg8w5xdkSqLKM9g==}
 
-  '@types/chroma-js@2.4.4':
-    resolution: {integrity: sha512-/DTccpHTaKomqussrn+ciEvfW4k6NAHzNzs/sts1TCqg333qNxOhy8TNIoQCmbGG3Tl8KdEhkGAssb1n3mTXiQ==}
-
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
@@ -676,9 +670,6 @@ packages:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
 
-  chroma-js@2.4.2:
-    resolution: {integrity: sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==}
-
   class-variance-authority@0.7.0:
     resolution: {integrity: sha512-jFI8IQw4hczaL4ALINxqLEXQbWcNjoSkloa4IaufXCJr6QawJyw7tuRysRsrE8w2p/4gGaxKIt/hX3qz/IbD1A==}
 
@@ -744,9 +735,6 @@ packages:
   data-view-byte-offset@1.0.0:
     resolution: {integrity: sha512-t/Ygsytq+R995EJ5PZlD4Cu56sWa8InXySaViRzw9apusqsOO2bQP+SbYzAhR0pFKoB+43lYy8rWban9JSuXnA==}
     engines: {node: '>= 0.4'}
-
-  date-fns@3.6.0:
-    resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
 
   debug@3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
@@ -1593,27 +1581,10 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  react-activity-calendar@2.2.10:
-    resolution: {integrity: sha512-6UsPmw6jD5TM5DHAVCIKkOhqdcJ1reOrFsMd3pDnQ5Yo8WfkFoDLjYQRYUkH6BWhishVpZ3JTn39Tf+3JyVY6w==}
-    peerDependencies:
-      react: ^17.0.0 || ^18.0.0
-      react-dom: ^17.0.0 || ^18.0.0
-
   react-dom@18.3.1:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
       react: ^18.3.1
-
-  react-error-boundary@4.0.13:
-    resolution: {integrity: sha512-b6PwbdSv8XeOSYvjt8LpgpKrZ0yGdtZokYwkwV2wlcZbxgopHX/hgPl5VgpnoVOWd868n1hktM8Qm4b+02MiLQ==}
-    peerDependencies:
-      react: '>=16.13.1'
-
-  react-github-calendar@4.1.5:
-    resolution: {integrity: sha512-l3Uzt2TnDdFGeKSpqpbX1rwIYydQLmVk4kjS6lpBhtbKAG1ejVRLbqM1TJhLgRIzORlouzGz94sis3trCiTi7A==}
-    peerDependencies:
-      react: ^17.0.0 || ^18.0.0
-      react-dom: ^17.0.0 || ^18.0.0
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -2246,8 +2217,6 @@ snapshots:
 
   '@tsconfig/recommended@1.0.6': {}
 
-  '@types/chroma-js@2.4.4': {}
-
   '@types/json5@0.0.29': {}
 
   '@types/node@20.14.2':
@@ -2483,8 +2452,6 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  chroma-js@2.4.2: {}
-
   class-variance-authority@0.7.0:
     dependencies:
       clsx: 2.0.0
@@ -2549,8 +2516,6 @@ snapshots:
       call-bind: 1.0.7
       es-errors: 1.3.0
       is-data-view: 1.0.1
-
-  date-fns@3.6.0: {}
 
   debug@3.2.7:
     dependencies:
@@ -3515,31 +3480,11 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  react-activity-calendar@2.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      '@types/chroma-js': 2.4.4
-      chroma-js: 2.4.2
-      date-fns: 3.6.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
   react-dom@18.3.1(react@18.3.1):
     dependencies:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
-
-  react-error-boundary@4.0.13(react@18.3.1):
-    dependencies:
-      '@babel/runtime': 7.24.7
-      react: 18.3.1
-
-  react-github-calendar@4.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-      react-activity-calendar: 2.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react-dom: 18.3.1(react@18.3.1)
-      react-error-boundary: 4.0.13(react@18.3.1)
 
   react-is@16.13.1: {}
 
