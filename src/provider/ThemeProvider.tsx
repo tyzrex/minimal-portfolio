@@ -10,7 +10,7 @@ export default function ColorModeProvider({
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="light"
       enableSystem={true}
       storageKey="theme"
     >

@@ -1,7 +1,4 @@
 import Link from "next/link";
-import { FlipWords } from "../molecules/flip-words";
-import { Button } from "../ui/button";
-import { BorderBeam } from "../molecules/border-bean";
 
 export default function HeroSection() {
   return (

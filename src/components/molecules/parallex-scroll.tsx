@@ -87,7 +87,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
                 quality={100}
                 className="aspect-[9/16] w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0"
                 alt="thumbnail"
-                priority={idx < 4}
+                loading="lazy"
                 placeholder="blur"
                 blurDataURL={el.url}
               />
@@ -110,7 +110,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
                 quality={100}
                 className="aspect-[9/16] w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0"
                 alt="thumbnail"
-                priority={idx < 4}
+                loading="lazy"
                 placeholder="blur"
                 blurDataURL={el.url}
               />
@@ -134,6 +134,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
                 quality={100}
                 alt="thumbnail"
                 placeholder="blur"
+                loading="lazy"
                 blurDataURL={el.url}
               />
             </motion.div>
@@ -156,6 +157,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
                 quality={100}
                 alt="thumbnail"
                 placeholder="blur"
+                loading="lazy"
                 blurDataURL={el.url}
               />
             </motion.div>
@@ -178,6 +180,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
                 quality={100}
                 alt="thumbnail"
                 placeholder="blur"
+                loading="lazy"
                 blurDataURL={el.url}
               />
             </motion.div>
@@ -200,6 +203,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
                 quality={100}
                 alt="thumbnail"
                 placeholder="blur"
+                loading="lazy"
                 blurDataURL={el.url}
               />
             </motion.div>

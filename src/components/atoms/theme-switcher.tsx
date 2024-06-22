@@ -29,6 +29,9 @@ export default function ThemeSwitcher() {
         onClick={() => toggleTheme()}
         variant={"ghost"}
         className="rounded-full p-2 "
+        name="Toggle Theme"
+        title="Toggle Theme"
+        aria-label="Toggle Theme"
       >
         {theme?.resolvedTheme === "dark" ? (
           <Lightbulb size={24} />

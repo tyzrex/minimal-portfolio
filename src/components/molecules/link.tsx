@@ -31,7 +31,9 @@ export default function Index({
           "w-[10px] h-[10px] bg-white rounded-full absolute -left-[30px]"
         }
       ></motion.div>
-      <Link href={href}>{title}</Link>
+      <Link prefetch={false} href={href}>
+        {title}
+      </Link>
     </motion.div>
   );
 }
