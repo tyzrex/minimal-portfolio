@@ -20,6 +20,7 @@ import {
   SiShadcnui,
   SiTypescript,
 } from "@icons-pack/react-simple-icons";
+import GithubContributions from "./github-section";
 
 export default function ProjectSection() {
   return (
@@ -52,6 +53,8 @@ export default function ProjectSection() {
             />
           ))}
         </div>
+
+        <GithubContributions />
       </SectionWrapper>
     </>
   );
