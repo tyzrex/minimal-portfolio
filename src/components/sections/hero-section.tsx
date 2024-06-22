@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 export default function HeroSection() {
   return (
@@ -81,22 +82,24 @@ export default function HeroSection() {
               </h1>
             </div>
 
-            <div className="flex flex-col items-center justify-end gap-5">
+            <div className="flex flex-col md:flex-row items-center justify-end gap-5">
               <Link prefetch={false} href="/contact" className="w-full">
-                <div className="flex items-start justify-start w-full h-full border dark:bg-transparent dark:border text-black dark:text-white rounded-lg flex-col p-4">
+                {/* <div className="flex items-start justify-start w-full h-full border dark:bg-transparent dark:border text-black dark:text-white rounded-lg flex-col p-4">
                   <div className="flex items-start gap-2 justify-start flex-col sm:flex-row">
                     <p>sb@devstudio:~$</p>
                     <p className="flex items-center">
                       <span>
                         <span className="sm:hidden">{"> "}</span>
-                        {/* command for emailing in gmail*/}
                         echo &quot;Contact me at&quot;{" "}
                         <span className="text-accent-red">&&</span> echo
                         &quot;sulavbaral58@gmail.com&quot;
                       </span>
                     </p>
                   </div>
-                </div>
+                </div> */}
+                <Button className="w-full text-lg dark:text-white dark:hover:bg-accent-red dark:bg-neutral-800 dark:border  transition-colors duration-300">
+                  Contact me
+                </Button>
               </Link>
               <Link
                 href="
@@ -104,7 +107,7 @@ export default function HeroSection() {
                 "
                 className="w-full"
               >
-                <div className="flex items-start justify-start w-full h-full  text-black dark:text-white border rounded-lg flex-col p-4">
+                {/* <div className="flex items-start justify-start w-full h-full  text-black dark:text-white border rounded-lg flex-col p-4">
                   <div className="flex items-start gap-2 justify-start flex-col sm:flex-row">
                     <p>sb@devstudio:~$</p>
                     <p className="flex items-center">
@@ -115,7 +118,10 @@ export default function HeroSection() {
                       </span>
                     </p>
                   </div>
-                </div>
+                </div> */}
+                <Button className="w-full bg-accent-red text-lg text-white hover:bg-accent-red/70 transition-colors duration-300">
+                  Download CV
+                </Button>
               </Link>
             </div>
           </div>

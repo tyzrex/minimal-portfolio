@@ -14,7 +14,7 @@ export default async function GithubContributions() {
             <CardTitle className="flex items-center">
               <Avatar>
                 {/* <AvatarImage src={githubStats.avatar_url} alt="@shadcn" /> */}
-                <AvatarFallback>tyzrex</AvatarFallback>
+                <AvatarFallback>t</AvatarFallback>
               </Avatar>
 
               <span className="ml-2 flex flex-col items-start">
@@ -28,9 +28,9 @@ export default async function GithubContributions() {
           <CardContent>
             <div className="flex flex-col gap-2">
               <div className="flex gap-2 flex-wrap">
-                Public Repos: <span>{}</span>
-                Followers: <span>{}</span>
-                Following: <span>{}</span>
+                Public Repos: <span>{48}</span>
+                Followers: <span>{34}</span>
+                Following: <span>{23}</span>
               </div>
               <div className="flex items-center gap-2">
                 <SiX size={16} />
@@ -52,7 +52,7 @@ export default async function GithubContributions() {
                 {Array.from({ length: 52 }, (_, j) => (
                   <div
                     key={j}
-                    className={`w-full h-full bg-gray-200 rounded-sm dark:bg-zinc-900 box-${i}-${j} aspect-square`}
+                    className={`w-full h-full dark:hover:bg-accent-red transition-colors duration-500 ease-out cursor-pointer bg-gray-200 rounded-sm dark:bg-zinc-900 box-${i}-${j} aspect-square`}
                   />
                 ))}
               </div>

@@ -3,7 +3,7 @@ import MaxWidthWrapper from "../wrappers/max-width-wrapper";
 
 export default function Footer() {
   return (
-    <div className="bg-primary dark:bg-transparent py-8 px-12 h-full w-full flex flex-col justify-between overflow-hidden">
+    <div className="bg-primary dark:bg-transparent py-8 h-full w-full flex flex-col justify-between overflow-hidden">
       <MaxWidthWrapper>
         <Section1 />
         <Section2 />
@@ -23,10 +23,9 @@ const Section1 = () => {
 const Section2 = () => {
   return (
     <div className="flex justify-between items-end">
-      <h1 className="text-[14vw] leading-[0.8] mt-10 text-white">
+      <h1 className="text-[14vw] averta-bold leading-[0.8] mt-10 text-white">
         Sulav Baral
       </h1>
-      <p>©copyright</p>
     </div>
   );
 };

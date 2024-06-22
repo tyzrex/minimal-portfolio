@@ -123,6 +123,7 @@ $accent-red: #d5211b;
         color: #fff;
         text-transform: uppercase;
         font-weight: 700;
+        padding: 10px 0px;
         font-size: 8vw;
         line-height: 7.5vw;
         margin: 0px;
@@ -138,12 +139,6 @@ $accent-red: #d5211b;
   }
 }
 
-.container {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-}
-
 .titles {
   width: 100%;
   .title {
@@ -156,7 +151,8 @@ $accent-red: #d5211b;
 
       p {
         display: inline-block;
-
+        padding-bottom: 10px;
+        padding-top: 10px;
         text-transform: uppercase;
         font-weight: 700;
         font-size: 8vw;

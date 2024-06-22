@@ -7,32 +7,31 @@ import Descriptions from "./socials-descriptions";
 const data = [
   {
     title: "FACEBOOK",
-    description:
-      "Working on the Next-Generation HMI Experience without no driving experience.",
+    description: "I know Mark but he doesn't know me.",
     speed: 0.5,
   },
   {
     title: "Instagram",
     description:
-      "Developed the Future of UFC Sports Ecosystem despite not being a sports fan.",
+      "I use instagram quite often. I post about my life, travels and cafe hopping. Come say hi!",
     speed: 0.5,
   },
   {
     title: "Twitter",
     description:
-      "Defined the visual concept and design language for the Lincoln Zephyr 2022 but never seen it in real life.",
+      "Not a big fan of twitter but I do lurk around sometimes. I follow Primegen and Elon Musk.",
     speed: 0.67,
   },
   {
     title: "Gmail ",
     description:
-      "I was just one person on a massive team that created an entire Royal Caribbean eco-system.",
+      "Serious inquiries only. I don't want to buy your product or service. I am not interested in SEO.",
     speed: 0.8,
   },
   {
     title: "Github",
     description:
-      "Designed a 1M+ users product utilizing my best personal experience: sleeping.",
+      "Come checkout my unfinished projects. I have a lot of them. I am a frontend developer and I center divs and push them to github lol.",
     speed: 0.8,
   },
 ];
