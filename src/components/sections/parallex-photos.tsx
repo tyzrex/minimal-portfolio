@@ -5,7 +5,7 @@ import SectionHeader from "../reusables/section-header";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Instagram } from "lucide-react";
-import { Suspense } from "react";
+import { Suspense, cache } from "react";
 
 cloudinary.v2.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -13,7 +13,7 @@ cloudinary.v2.config({
   api_secret: process.env.API_SECRET,
 });
 
-async function getAllCloudinaryPhotos() {
+const getPhotos = cache(async () => {
   const res = await cloudinary.v2.api.resources({
     type: "upload",
     prefix: "uploaded/Portfolio/",
@@ -21,10 +21,10 @@ async function getAllCloudinaryPhotos() {
     context: true,
   });
   return res.resources;
-}
+});
 
 async function Gallery() {
-  const photos = await getAllCloudinaryPhotos();
+  const photos = await getPhotos();
 
   const gallery = photos.map((photo: any) => {
     return {

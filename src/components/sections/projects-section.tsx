@@ -1,4 +1,3 @@
-import WordBadge from "../atoms/word-badge";
 import MinorProjectCards from "../reusables/minor-project-card";
 import ProjectCard from "../reusables/project-card";
 import SectionHeader from "../reusables/section-header";
@@ -21,6 +20,7 @@ import {
   SiTypescript,
 } from "@icons-pack/react-simple-icons";
 import GithubContributions from "./github-section";
+// import GithubContributions from "./github-section";
 
 export default function ProjectSection() {
   return (
