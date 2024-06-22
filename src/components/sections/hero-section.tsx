@@ -85,7 +85,7 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col items-center justify-end gap-5">
-              <Link href="/contact" className="w-full">
+              <Link prefetch={false} href="/contact" className="w-full">
                 <div className="flex items-start justify-start w-full h-full border dark:bg-transparent dark:border text-black dark:text-white rounded-lg flex-col p-4">
                   <div className="flex items-start gap-2 justify-start flex-col sm:flex-row">
                     <p>sb@devstudio:~$</p>
