@@ -210,7 +210,6 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
           ))}
         </div>
       </div>
-      <div className={styles.spacer}></div>
     </>
   );
 };
