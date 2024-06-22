@@ -1,10 +1,9 @@
 import { SiGotomeeting, SiTwitter, SiX } from "@icons-pack/react-simple-icons";
 import GitCalendar from "../molecules/git-calender";
-import { GithubBeam } from "../molecules/single-animated-beam";
+import GithubBeam from "../molecules/single-animated-beam";
 import SectionSubHeader from "../reusables/section-sub-header";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import GitHubCalendar from "react-github-calendar";
 import { ArrowUpRightFromCircle } from "lucide-react";
 import Link from "next/link";
 
@@ -15,7 +14,6 @@ async function getGithubStats() {
 
 export default async function GithubContributions() {
   const githubStats = await getGithubStats();
-  console.log(githubStats);
 
   return (
     <div className="mt-10">

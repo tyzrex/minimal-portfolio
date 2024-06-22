@@ -5,7 +5,6 @@ import GitHubCalendar from "react-github-calendar";
 
 export default function GitCalendar() {
   const { theme } = useTheme();
-  console.log(theme);
   return (
     <GitHubCalendar
       style={{ width: "100%" }}

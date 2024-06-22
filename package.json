@@ -26,6 +26,7 @@
     "react-dom": "^18",
     "react-github-calendar": "^4.1.5",
     "sass": "^1.77.5",
+    "sharp": "^0.33.4",
     "simple-icons": "^12.3.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"

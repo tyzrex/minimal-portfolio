@@ -16,7 +16,7 @@ export default function index({
     description: string;
     speed: number;
   }[];
-  setSelectedProject: Dispatch<SetStateAction<null>>;
+  setSelectedProject: any;
 }) {
   return (
     <div className={styles.titles}>
@@ -42,7 +42,7 @@ function Title({
     speed: number;
     i: number;
   };
-  setSelectedProject: Dispatch<SetStateAction<null>>;
+  setSelectedProject: any;
 }) {
   const { title, speed, i } = data;
   const container = useRef(null);
