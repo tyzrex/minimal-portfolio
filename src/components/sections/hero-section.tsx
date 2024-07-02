@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
-import IdCard from "../globals/id-card";
 
 export default function HeroSection() {
   return (
@@ -71,9 +70,6 @@ export default function HeroSection() {
                 </div>
               </div>
             </aside>
-            <div className="absolute w-full h-full">
-              <IdCard />
-            </div>
           </div>
           <div className="flex flex-col gap-10 xl:p-20 my-10 xl:my-0">
             <div className="flex flex-col xl:mx-auto">
