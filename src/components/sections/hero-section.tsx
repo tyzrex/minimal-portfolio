@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
+import IdCard from "../globals/id-card";
 
 export default function HeroSection() {
   return (
     <>
-      <section className="h-autos md:border-b">
-        <div></div>
-        <div className="grid grid-cols-1 xl:grid-cols-2 ">
-          <div className="md:border-r-2 p-0 xl:p-10 relative flex flex-col gap-10 items-center justify-center order-last xl:order-first">
+      <section className="h-auto md:border-b ">
+        <div className="grid grid-cols-1 xl:grid-cols-2">
+          <div className="relative md:border-r-2 p-0 xl:p-10 flex flex-col gap-10 items-center justify-center order-last xl:order-first ">
             <div className="grid grid-cols-2 xl:grid-rows-2 w-full h-full xl:absolute xl:top-0 xl:left-0 xl:-z-10">
               <div className="border-r-2 border-b-2 h-full w-full p-5 ">
                 <div className="flex items-center justify-center h-full w-full ">
@@ -71,8 +71,11 @@ export default function HeroSection() {
                 </div>
               </div>
             </aside>
+            <div className="absolute w-full h-full">
+              <IdCard />
+            </div>
           </div>
-          <div className="flex flex-col gap-10 xl:p-16 my-10 xl:my-0">
+          <div className="flex flex-col gap-10 xl:p-20 my-10 xl:my-0">
             <div className="flex flex-col xl:mx-auto">
               <h1 className="hero-typography">
                 <span className="text-gradient">
@@ -82,7 +85,7 @@ export default function HeroSection() {
               </h1>
             </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-end gap-5">
+            <div className="flex flex-col md:flex-row items-center justify-end gap-3">
               <Link prefetch={false} href="/contact" className="w-full">
                 {/* <div className="flex items-start justify-start w-full h-full border dark:bg-transparent dark:border text-black dark:text-white rounded-lg flex-col p-4">
                   <div className="flex items-start gap-2 justify-start flex-col sm:flex-row">
@@ -102,9 +105,9 @@ export default function HeroSection() {
                 </Button>
               </Link>
               <Link
-                href="
-              https://sulavbaral.com.np/resume
-                "
+                href={"/Sulav_Baral_Resume.pdf"}
+                download
+                prefetch={false}
                 className="w-full"
               >
                 {/* <div className="flex items-start justify-start w-full h-full  text-black dark:text-white border rounded-lg flex-col p-4">

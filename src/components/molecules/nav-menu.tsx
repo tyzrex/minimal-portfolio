@@ -71,12 +71,6 @@ export default function NavMenu({
             );
           })}
         </div>
-        <div className="flex w-full justify-between text-lg">
-          <a>Awwwards</a>
-          <a>Instagram</a>
-          <a>Dribble</a>
-          <a>LinkedIn</a>
-        </div>
       </div>
     </motion.div>
   );
