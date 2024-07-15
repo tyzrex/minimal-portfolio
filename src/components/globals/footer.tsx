@@ -56,18 +56,18 @@ const Section2 = () => {
 const Nav = () => {
   return (
     <div>
-      <div className="text-3xl flex flex-row items-center justify-center w-full gap-10 text-white">
+      <div className="text-lg md:text-xl flex flex-row items-center justify-center w-full gap-5 md:gap-10 text-white">
         <p>Home</p>
         <p>Projects</p>
         <p>About</p>
         <p>Contact</p>
       </div>
-      <div className="flex flex-row items-center justify-center w-full gap-10 mt-10">
-        <SiFacebook size={30} className="text-white" />
-        <SiInstagram size={30} className="text-white" />
-        <SiX size={30} className="text-white" />
-        <SiGmail size={30} className="text-white" />
-        <SiGithub size={30} className="text-white" />
+      <div className="flex flex-row items-center justify-center w-full gap-5 md:gap-10 mt-10">
+        <SiFacebook size={18} className="text-white" />
+        <SiInstagram size={18} className="text-white" />
+        <SiX size={18} className="text-white" />
+        <SiGmail size={18} className="text-white" />
+        <SiGithub size={18} className="text-white" />
       </div>
     </div>
   );

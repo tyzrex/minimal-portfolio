@@ -5,6 +5,13 @@ import SectionSubHeader from "../reusables/section-sub-header";
 import SectionWrapper from "../wrappers/section-wrapper";
 import Image1 from "@/../public/images/image1.png";
 import Image2 from "@/../public/images/image2.png";
+import Smatch from "@/../public/images/smatch.jpeg";
+import Smatch2 from "@/../public/images/smatch2.jpeg";
+import Smatch1 from "@/../public/images/smatch3.jpeg";
+import BB1 from "@/../public/images/bb.png";
+import BB2 from "@/../public/images/bb1.png";
+import BB3 from "@/../public/images/bb3.png";
+
 import {
   SiNextdotjs,
   SiFlask,
@@ -91,8 +98,24 @@ const projects = [
       "FastAPI",
       "TailwindCSS",
     ],
-    images: [Image1, Image2, Image1],
+    images: [Smatch, Smatch1, Smatch],
     className: "order-last",
+  },
+  {
+    name: "BlinkedBids",
+    description:
+      "BlinkedBids is a full-stack e-commerce web application that allows users to buy products from various categories. This includes features such as product filtering, sorting, and a shopping cart. The application utilizes modern web technologies including Django and NextJs. We also have integrated esewa payment gateway for the payment system. The platform addresses the need for an accessible, digital solution in the e-commerce market, with a pleasant user interface and a seamless shopping experience.",
+    techs: [
+      "NextJS",
+      "Django",
+      "Esewa",
+      "PostgreSQL",
+      "NextAuth",
+      "ShadcnUI",
+      "TailwindCSS",
+    ],
+    images: [BB2, BB1, BB3],
+    className: "order-first",
   },
 ];
 

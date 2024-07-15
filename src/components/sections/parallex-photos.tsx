@@ -58,7 +58,7 @@ export async function Photos() {
           <div className="flex md:items-center gap-5 mt-5 flex-col md:flex-row">
             <Link
               prefetch={false}
-              href="https://www.instagram.com/sb.dio/"
+              href="https://www.instagram.com/sulav_baral_58/"
               target="_blank"
             >
               <Button>
@@ -69,7 +69,7 @@ export async function Photos() {
 
             <Link
               prefetch={false}
-              href="https://www.instagram.com/sb.dio/"
+              href="https://www.instagram.com/mr.ialboe/"
               target="_blank"
             >
               <Button className="bg-accent-red text-white">
