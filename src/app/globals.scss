@@ -116,7 +116,7 @@ body {
 
   .sub-section-title-typography {
     @apply text-lg md:text-2xl xl:text-3xl averta-semibold
-    mb-5;
+    mb-2 md:mb-5;
   }
 }
 

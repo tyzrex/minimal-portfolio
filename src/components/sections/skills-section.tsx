@@ -11,7 +11,7 @@ export default function SkillSection() {
         <div className="flex flex-col gap-10">
           <div className="flex flex-col">
             <SectionSubHeader title="Languages and Frameworks" />
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-start mt-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-start mt-2 md:mt-5">
               <div className="flex  items-center justify-start flex-wrap gap-2 lg:max-w-2xl">
                 <WordBadge variant={"light"} word="react" />
                 <WordBadge variant={"light"} word="nextjs" />
@@ -31,8 +31,9 @@ export default function SkillSection() {
                 <WordBadge variant={"light"} word="express" />
                 <WordBadge variant={"light"} word="mongodb" />
                 <WordBadge variant={"light"} word="postgresql" />
+                <WordBadge variant={"light"} word="strapi" />
               </div>
-              <div className="mt-10 lg:mt-0">
+              <div className="mt-5 lg:mt-0">
                 <p className="section-p-typography">
                   I primarily work with React and NextJS and the libraries
                   surrounding it as my frontend tools for both personal and
@@ -47,7 +48,7 @@ export default function SkillSection() {
 
           <div className="flex flex-col">
             <SectionSubHeader title="Tools and Technologies" />
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-start mt-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-start mt-2 md:mt-5">
               <div className="flex items-center justify-start flex-wrap gap-2 lg:max-w-2xl">
                 <WordBadge variant={"light"} word="git" />
                 <WordBadge variant={"light"} word="github" />
@@ -60,7 +61,7 @@ export default function SkillSection() {
                 <WordBadge variant={"light"} word="docker" />
                 <WordBadge variant={"light"} word="linux" />
               </div>
-              <div className="mt-10 lg:mt-0">
+              <div className="mt-5 lg:mt-0">
                 <p className="section-p-typography">
                   I use Git for version control and have experience with GitHub
                   and GitLab. I design my projects using Figma and code them in
