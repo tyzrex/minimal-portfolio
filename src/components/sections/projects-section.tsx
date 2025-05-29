@@ -11,6 +11,9 @@ import Smatch1 from "@/../public/images/smatch3.jpeg";
 import BB1 from "@/../public/images/bb.png";
 import BB2 from "@/../public/images/bb1.png";
 import BB3 from "@/../public/images/bb3.png";
+import MockStox from "@/../public/images/mockstox.png";
+import MockStox1 from "@/../public/images/mockstox1.png";
+import MockStox2 from "@/../public/images/mockstox2.png";
 
 import {
   SiNextdotjs,
@@ -68,6 +71,23 @@ export default function ProjectSection() {
 }
 
 const projects = [
+  {
+    name: "MockStox: Paper Trading & AI Stock Prediction",
+    description:
+      "MockStox is an AI-powered stock trading simulation platform that blends finance, technology, and machine learning to deliver a realistic and educational trading experience. Designed for aspiring traders and enthusiasts, MockStox enables users to practice stock trading with virtual currency while leveraging AI-driven predictions to inform their decisions. The platform features real-time charts, predictive analytics, and a clean, user-focused interface to mimic real-world market conditions.MockStox stands out with its intelligent insights generated through LSTM-based models, helping users understand potential market movements. With a focus on accessibility, performance, and data visualization, the platform offers a modern approach to financial literacy and paper trading.",
+    techs: [
+      "NextJS",
+      "Django REST",
+      "Tensorflow",
+      "Pandas",
+      "PostgreSQL",
+      "Shadcn",
+      "TypeScript",
+      "TailwindCSS",
+    ],
+    images: [MockStox2, MockStox1, MockStox],
+    className: "order-last",
+  },
   {
     name: "Better Bikes",
     description:

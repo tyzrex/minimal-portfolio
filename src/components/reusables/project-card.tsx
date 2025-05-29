@@ -8,7 +8,6 @@ import Image1 from "@/../public/images/image1.png";
 import Image2 from "@/../public/images/image2.png";
 import style from "../molecules/menu.module.scss";
 import { Button } from "../ui/button";
-import { GithubIcon } from "lucide-react";
 import { SiGithub, SiGooglechrome } from "@icons-pack/react-simple-icons";
 
 export default function ProjectCard({
@@ -37,7 +36,7 @@ export default function ProjectCard({
     {
       src: image[0],
       y: sm,
-      aspectRatio: "16/9",
+      aspectRatio: "9/16",
     },
     {
       src: image[1],
@@ -93,8 +92,7 @@ export default function ProjectCard({
                       //   fill
                       className={
                         "object-cover border object-center w-full h-full rounded-lg gap-10 !m-0 !p-0" +
-                        "aspect-" +
-                        images[i].aspectRatio
+                        `aspect-[${images[i].aspectRatio}]`
                       }
                     />
                   </motion.div>

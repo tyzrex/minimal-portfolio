@@ -45,7 +45,7 @@ const Section1 = () => {
 const Section2 = () => {
   return (
     <div className="flex justify-center mb-20">
-      <h1 className="text-[14vw] averta-bold leading-[0.8] mt-10 text-white">
+      <h1 className="text-[14vw] 2xl:text-[256px] averta-bold leading-[0.8] mt-10 text-white">
         <span className="dark:text-gradient">Sulav Baral</span>
         <span className="text-accent-red">.</span>
       </h1>
