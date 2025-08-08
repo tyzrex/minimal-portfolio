@@ -24,7 +24,7 @@ export default function EducationSection() {
                 <p>
                   Bachelor in Computer Science & Information Technology
                   (BSc.CSIT) <br />
-                  2021 - Present
+                  June 2021 - July 2025
                 </p>
               </div>
             </div>
