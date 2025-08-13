@@ -1,23 +1,26 @@
-import { type NextRequest, NextResponse } from "next/server"
-import nodemailer from "nodemailer"
+import { type NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, subject, message } = await request.json()
+    const { name, email, subject, message } = await request.json();
 
     // Validate required fields
     if (!name || !email || !subject || !message) {
-      return NextResponse.json({ error: "All fields are required" }, { status: 400 })
+      return NextResponse.json(
+        { error: "All fields are required" },
+        { status: 400 }
+      );
     }
 
     // Create transporter
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_APP_PASSWORD,
       },
-    })
+    });
 
     // Email to you (receiving the contact form)
     const mailToYou = {
@@ -39,7 +42,10 @@ export async function POST(request: NextRequest) {
           
           <div style="background-color: #fff; padding: 20px; border-left: 4px solid #d5211b; margin: 20px 0;">
             <h3 style="margin-top: 0; color: #333;">Message:</h3>
-            <p style="line-height: 1.6; color: #555;">${message.replace(/\n/g, "<br>")}</p>
+            <p style="line-height: 1.6; color: #555;">${message.replace(
+              /\n/g,
+              "<br>"
+            )}</p>
           </div>
           
           <div style="margin-top: 30px; padding: 15px; background-color: #e8f5e8; border-radius: 5px;">
@@ -49,7 +55,7 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-    }
+    };
 
     // Auto-reply email to the sender
     const autoReply = {
@@ -69,7 +75,9 @@ export async function POST(request: NextRequest) {
           <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="margin-top: 0; color: #333;">Your Message Summary:</h3>
             <p><strong>Subject:</strong> ${subject}</p>
-            <p><strong>Message:</strong> ${message.substring(0, 100)}${message.length > 100 ? "..." : ""}</p>
+            <p><strong>Message:</strong> ${message.substring(0, 100)}${
+        message.length > 100 ? "..." : ""
+      }</p>
           </div>
           
           <p>In the meantime, feel free to:</p>
@@ -93,15 +101,21 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-    }
+    };
 
     // Send both emails
-    await transporter.sendMail(mailToYou)
-    await transporter.sendMail(autoReply)
+    await transporter.sendMail(mailToYou);
+    await transporter.sendMail(autoReply);
 
-    return NextResponse.json({ message: "Email sent successfully" }, { status: 200 })
+    return NextResponse.json(
+      { message: "Email sent successfully" },
+      { status: 200 }
+    );
   } catch (error) {
-    console.error("Error sending email:", error)
-    return NextResponse.json({ error: "Failed to send email" }, { status: 500 })
+    console.error("Error sending email:", error);
+    return NextResponse.json(
+      { error: "Failed to send email" },
+      { status: 500 }
+    );
   }
 }

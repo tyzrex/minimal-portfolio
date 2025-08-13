@@ -1,8 +1,14 @@
-import SectionWrapper from "../wrappers/section-wrapper"
-import SectionHeader from "../reusables/section-header"
-import { Button } from "../ui/button"
-import Link from "next/link"
-import { SiFacebook, SiInstagram, SiX, SiGmail, SiGithub } from "@icons-pack/react-simple-icons"
+import SectionWrapper from "../wrappers/section-wrapper";
+import SectionHeader from "../reusables/section-header";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import {
+  SiFacebook,
+  SiInstagram,
+  SiX,
+  SiGmail,
+  SiGithub,
+} from "@icons-pack/react-simple-icons";
 
 export default function Socials() {
   return (
@@ -11,13 +17,19 @@ export default function Socials() {
 
       <div>
         <p className="section-p-typography mb-12 text-left">
-          Let's stay connected! Follow my journey, see my latest work, or just say hello. I love connecting with fellow
-          developers, potential clients, and anyone interested in tech and creativity.
+          Let&apos;s stay connected! Follow my journey, see my latest work, or
+          just say hello. I love connecting with fellow developers, potential
+          clients, and anyone interested in tech and creativity.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {socialLinks.map((social, index) => (
-            <Link key={index} href={social.url} target="_blank" rel="noopener noreferrer">
+            <Link
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="group bg-white dark:bg-transparent border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:border-accent-red/50">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-accent-red/10 rounded-full flex items-center justify-center group-hover:bg-accent-red/20 transition-colors">
@@ -25,7 +37,9 @@ export default function Socials() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm">{social.name}</h3>
-                    <p className="text-xs section-p-typography">{social.description}</p>
+                    <p className="text-xs section-p-typography">
+                      {social.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -36,7 +50,10 @@ export default function Socials() {
         <div className="mt-12">
           <p className="section-p-typography mb-6 text-left">
             Prefer email? Drop me a line anytime at{" "}
-            <Link href="mailto:sulavbaral58@gmail.com" className="text-accent-red hover:underline">
+            <Link
+              href="mailto:sulavbaral58@gmail.com"
+              className="text-accent-red hover:underline"
+            >
               sulavbaral58@gmail.com
             </Link>
           </p>
@@ -53,7 +70,7 @@ export default function Socials() {
         </div>
       </div>
     </SectionWrapper>
-  )
+  );
 }
 
 const socialLinks = [
@@ -93,4 +110,4 @@ const socialLinks = [
     icon: SiGmail,
     url: "mailto:sulavbaral58@gmail.com",
   },
-]
+];
