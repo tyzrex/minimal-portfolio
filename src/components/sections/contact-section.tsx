@@ -1,22 +1,35 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "../ui/button"
-import { Input } from "../ui/input"
-import { Textarea } from "../ui/textarea"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react"
-import SectionHeader from "../reusables/section-header"
-import SectionWrapper from "../wrappers/section-wrapper"
-import { Badge } from "../ui/badge"
+import { useState } from "react";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
+  AlertCircle,
+} from "lucide-react";
+import SectionHeader from "../reusables/section-header";
+import SectionWrapper from "../wrappers/section-wrapper";
+import { Badge } from "../ui/badge";
 
 interface FormData {
-  name: string
-  email: string
-  subject: string
-  message: string
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
 }
 
 export default function ContactSection() {
@@ -25,19 +38,23 @@ export default function ContactSection() {
     email: "",
     subject: "",
     message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus("idle")
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
 
     try {
       const response = await fetch("/api/contact", {
@@ -46,20 +63,20 @@ export default function ContactSection() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      })
+      });
 
       if (response.ok) {
-        setSubmitStatus("success")
-        setFormData({ name: "", email: "", subject: "", message: "" })
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        setSubmitStatus("error")
+        setSubmitStatus("error");
       }
     } catch (error) {
-      setSubmitStatus("error")
+      setSubmitStatus("error");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <SectionWrapper>
@@ -78,10 +95,14 @@ export default function ContactSection() {
 
         <div className="grid lg:grid-cols-2 gap-10">
           <div>
-            <h3 className="sub-section-title-typography mb-5">Let's work together</h3>
+            <h3 className="sub-section-title-typography mb-5">
+              Let&apos;s work together
+            </h3>
             <p className="section-p-typography mb-8">
-              I'm currently available for freelance projects and full-time opportunities. Whether you need a modern
-              website, web application, or want to discuss a potential collaboration, I'd love to hear from you!
+              I&apos;m currently available for freelance projects and full-time
+              opportunities. Whether you need a modern website, web application,
+              or want to discuss a potential collaboration, I&apos;d love to
+              hear from you!
             </p>
 
             <div className="space-y-6">
@@ -111,7 +132,9 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="font-semibold">Response Time</p>
-                  <p className="section-p-typography">Usually within 24 hours</p>
+                  <p className="section-p-typography">
+                    Usually within 24 hours
+                  </p>
                 </div>
               </div>
             </div>
@@ -120,7 +143,10 @@ export default function ContactSection() {
           <Card className="dark:bg-transparent">
             <CardHeader>
               <CardTitle>Send me a message</CardTitle>
-              <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
+              <CardDescription>
+                Fill out the form below and I&apos;ll get back to you as soon as
+                possible.
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -174,14 +200,19 @@ export default function ContactSection() {
                 {submitStatus === "success" && (
                   <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
                     <CheckCircle className="w-5 h-5" />
-                    <span>Message sent successfully! I'll get back to you soon.</span>
+                    <span>
+                      Message sent successfully! I&apos;ll get back to you soon.
+                    </span>
                   </div>
                 )}
 
                 {submitStatus === "error" && (
                   <div className="flex items-center gap-2 text-red-600 dark:text-red-400">
                     <AlertCircle className="w-5 h-5" />
-                    <span>Failed to send message. Please try again or email me directly.</span>
+                    <span>
+                      Failed to send message. Please try again or email me
+                      directly.
+                    </span>
                   </div>
                 )}
 
@@ -208,5 +239,5 @@ export default function ContactSection() {
         </div>
       </div>
     </SectionWrapper>
-  )
+  );
 }

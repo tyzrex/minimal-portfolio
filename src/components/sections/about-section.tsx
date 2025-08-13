@@ -1,7 +1,7 @@
-import SectionHeader from "../reusables/section-header"
-import SectionWrapper from "../wrappers/section-wrapper"
-import { Badge } from "../ui/badge"
-import { GraduationCap, MapPin, Coffee, Code } from "lucide-react"
+import SectionHeader from "../reusables/section-header";
+import SectionWrapper from "../wrappers/section-wrapper";
+import { Badge } from "../ui/badge";
+import { GraduationCap, MapPin, Coffee, Code } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -30,39 +30,50 @@ export default function AboutSection() {
           </div>
 
           <p className="section-p-typography mb-6">
-            Hi there! I'm Sulav, a passionate frontend developer who just completed my Computer Science degree from
-            Tribhuvan University last month. While I'm fresh out of college, I've been building real-world applications
-            and gaining professional experience for over two years now.
+            Hi there! I&apos;m Sulav, a passionate frontend developer who just
+            completed my Computer Science degree from Tribhuvan University last
+            month. While I&apos;m fresh out of college, I&apos;ve been building
+            real-world applications and gaining professional experience for over
+            two years now.
           </p>
 
           <p className="section-p-typography mb-6">
-            What drives me? Creating digital experiences that people actually enjoy using. I believe great websites
-            shouldn't just look good—they should feel intuitive, load fast, and solve real problems. Whether it's a
-            sleek business website or a complex web application, I focus on building solutions that make users' lives
-            easier.
+            What drives me? Creating digital experiences that people actually
+            enjoy using. I believe great websites shouldn&apos;t just look
+            good—they should feel intuitive, load fast, and solve real problems.
+            Whether it&apos;s a sleek business website or a complex web
+            application, I focus on building solutions that make users&apos;
+            lives easier.
           </p>
 
           <p className="section-p-typography mb-6">
-            I'm currently working as an Associate Software Engineer at Hamro Patro, where I get to work on products used
-            by millions of Nepali users. But I also love taking on freelance projects because each client brings unique
-            challenges that help me grow as a developer. There's something special about working directly with clients
-            and seeing their ideas come to life.
+            I&apos;m currently working as an Associate Software Engineer at
+            Hamro Patro, where I get to work on products used by millions of
+            Nepali users. But I also love taking on freelance projects because
+            each client brings unique challenges that help me grow as a
+            developer. There&apos;s something special about working directly
+            with clients and seeing their ideas come to life.
           </p>
 
           <p className="section-p-typography mb-6">
-            When I'm not coding, you'll find me exploring Kathmandu's cafe scene with my camera, capturing moments that
-            tell stories. I'm also that person who gets genuinely excited about clean code, smooth animations, and
-            finding the perfect color palette for a project. I've probably visited every cafe in Thamel while working on
-            projects—good coffee plus good code equals a happy developer!
+            When I&apos;m not coding, you&apos;ll find me exploring
+            Kathmandu&apos;s cafe scene with my camera, capturing moments that
+            tell stories. I&apos;m also that person who gets genuinely excited
+            about clean code, smooth animations, and finding the perfect color
+            palette for a project. I&apos;ve probably visited every cafe in
+            Thamel while working on projects—good coffee plus good code equals a
+            happy developer!
           </p>
 
           <p className="section-p-typography">
-            I'm always open to new opportunities and collaborations. Whether you're a startup looking for a dedicated
-            developer, a business needing a modern website, or someone with a crazy idea that needs to be built—let's
-            chat! I believe the best projects come from great conversations and shared enthusiasm.
+            I&apos;m always open to new opportunities and collaborations.
+            Whether you&apos;re a startup looking for a dedicated developer, a
+            business needing a modern website, or someone with a crazy idea that
+            needs to be built—let&apos;s chat! I believe the best projects come
+            from great conversations and shared enthusiasm.
           </p>
         </div>
       </SectionWrapper>
     </>
-  )
+  );
 }

@@ -1,38 +1,49 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import Footer from "@/components/globals/footer"
-import SectionWrapper from "@/components/wrappers/section-wrapper"
-import { ArrowLeft, Send, Heart, MessageCircle, User, Sparkles, Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import Link from "next/link"
-import { Badge } from "@/components/ui/badge"
-import { useState } from "react"
+import Footer from "@/components/globals/footer";
+import SectionWrapper from "@/components/wrappers/section-wrapper";
+import {
+  ArrowLeft,
+  Send,
+  Heart,
+  MessageCircle,
+  User,
+  Sparkles,
+  Star,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 
 export default function VisitorsBoardPage() {
-  const [name, setName] = useState("")
-  const [message, setMessage] = useState("")
-  const [email, setEmail] = useState("")
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission here
-    console.log({ name, message, email })
+    console.log({ name, message, email });
     // Reset form
-    setName("")
-    setMessage("")
-    setEmail("")
-  }
+    setName("");
+    setMessage("");
+    setEmail("");
+  };
 
   return (
     <main className="min-h-screen">
       <SectionWrapper>
         {/* Header */}
         <section className="py-20 border-b">
-          <Link href="/" className="inline-flex items-center text-accent-red hover:underline mb-8">
+          <Link
+            href="/"
+            className="inline-flex items-center text-accent-red hover:underline mb-8"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
@@ -44,9 +55,10 @@ export default function VisitorsBoardPage() {
             </h1>
 
             <p className="section-p-typography mb-8">
-              Welcome to my visitors board! This is a space where anyone who visits my portfolio can leave a message,
-              share feedback, or just say hello. I love hearing from fellow developers, potential clients, and anyone
-              interested in connecting.
+              Welcome to my visitors board! This is a space where anyone who
+              visits my portfolio can leave a message, share feedback, or just
+              say hello. I love hearing from fellow developers, potential
+              clients, and anyone interested in connecting.
             </p>
           </div>
         </section>
@@ -69,14 +81,18 @@ export default function VisitorsBoardPage() {
                   <span className="text-gradient">Leave Your Mark</span>
                 </h2>
                 <p className="section-p-typography">
-                  Share your thoughts, feedback, or just say hello! Every message makes my day ✨
+                  Share your thoughts, feedback, or just say hello! Every
+                  message makes my day ✨
                 </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-semibold text-gray-700 dark:text-gray-300"
+                    >
                       What should I call you? *
                     </label>
                     <Input
@@ -89,7 +105,10 @@ export default function VisitorsBoardPage() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-semibold text-gray-700 dark:text-gray-300"
+                    >
                       Email (for replies)
                     </label>
                     <Input
@@ -104,8 +123,11 @@ export default function VisitorsBoardPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 dark:text-gray-300">
-                    What's on your mind? *
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300"
+                  >
+                    What&apos;s on your mind? *
                   </label>
                   <Textarea
                     id="message"
@@ -134,11 +156,16 @@ export default function VisitorsBoardPage() {
 
         {/* Messages */}
         <section className="py-20 border-t">
-          <h2 className="sub-section-title-typography mb-12 text-center">Recent Messages</h2>
+          <h2 className="sub-section-title-typography mb-12 text-center">
+            Recent Messages
+          </h2>
 
           <div className="space-y-6">
             {sampleMessages.map((msg, index) => (
-              <div key={index} className="bg-white dark:bg-transparent border rounded-2xl p-6">
+              <div
+                key={index}
+                className="bg-white dark:bg-transparent border rounded-2xl p-6"
+              >
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-accent-red/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <User className="w-5 h-5 text-accent-red" />
@@ -179,20 +206,25 @@ export default function VisitorsBoardPage() {
         {/* CTA */}
         <section className="py-20 border-t">
           <div className="text-center">
-            <h3 className="sub-section-title-typography mb-4">Want to Work Together?</h3>
+            <h3 className="sub-section-title-typography mb-4">
+              Want to Work Together?
+            </h3>
             <p className="section-p-typography mb-6">
-              If you're interested in collaborating on a project or just want to have a more detailed conversation, feel
-              free to reach out directly!
+              If you&apos;re interested in collaborating on a project or just
+              want to have a more detailed conversation, feel free to reach out
+              directly!
             </p>
             <Link href="#contact">
-              <Button className="bg-accent-red hover:bg-accent-red/90 text-white">Get in Touch</Button>
+              <Button className="bg-accent-red hover:bg-accent-red/90 text-white">
+                Get in Touch
+              </Button>
             </Link>
           </div>
         </section>
       </SectionWrapper>
       <Footer />
     </main>
-  )
+  );
 }
 
 const sampleMessages = [
@@ -223,9 +255,9 @@ const sampleMessages = [
   {
     name: "Priya Sharma",
     message:
-      "Hi Sulav! I'm a startup founder looking for a frontend developer. Your Better Bikes project caught my attention. Would love to discuss a potential project with you.",
+      "Hi Sulav! I&apos;m a startup founder looking for a frontend developer. Your Better Bikes project caught my attention. Would love to discuss a potential project with you.",
     date: "3 weeks ago",
     likes: 2,
     isClient: true,
   },
-]
+];

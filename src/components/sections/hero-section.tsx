@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { Button } from "../ui/button"
-import { Badge } from "../ui/badge"
-import { Sparkles, Briefcase } from "lucide-react"
+import Link from "next/link";
+import { Button } from "../ui/button";
+import { Badge } from "../ui/badge";
+import { Sparkles, Briefcase } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -14,7 +14,9 @@ export default function HeroSection() {
                 <div className="flex items-center justify-center h-full w-full ">
                   <span className="hero-typography-normal">s</span>
                   <span className="hero-typography-normal">b</span>
-                  <span className="hero-typography-normal text-accent-red">.</span>
+                  <span className="hero-typography-normal text-accent-red">
+                    .
+                  </span>
                 </div>
               </div>
               <div className="border-b-2 h-full w-full p-5">
@@ -55,12 +57,15 @@ export default function HeroSection() {
                 </Badge>
               </div>
               <h1 className="hero-typography">
-                <span className="text-gradient">hi i am sulav baral frontend developer from kathmandu, nepal</span>
+                <span className="text-gradient">
+                  hi i am sulav baral frontend developer from kathmandu, nepal
+                </span>
                 <span className="text-accent-red">.</span>
               </h1>
               <p className="section-p-typography mt-5">
-                I create modern web experiences that users love. Currently working full-time while taking on exciting
-                freelance projects. Let's build something amazing together!
+                I create modern web experiences that users love. Currently
+                working full-time while taking on exciting freelance projects.
+                Let&apos;s build something amazing together!
               </p>
             </div>
 
@@ -71,7 +76,12 @@ export default function HeroSection() {
                   Hire Me
                 </Button>
               </Link>
-              <Link href={"/Sulav_Baral_Resume.pdf"} download prefetch={false} className="w-full">
+              <Link
+                href={"/Sulav_Baral_Resume.pdf"}
+                download
+                prefetch={false}
+                className="w-full"
+              >
                 <Button className="w-full bg-accent-red text-lg text-white hover:bg-accent-red/70 transition-colors duration-300">
                   Download CV
                 </Button>
@@ -81,5 +91,5 @@ export default function HeroSection() {
         </div>
       </section>
     </>
-  )
+  );
 }

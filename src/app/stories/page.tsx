@@ -1,14 +1,23 @@
-import Footer from "@/components/globals/footer"
-import MaxWidthWrapper from "@/components/wrappers/max-width-wrapper"
-import { Calendar, Clock, ArrowLeft, Coffee, Code, Camera, Lightbulb } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { Badge } from "@/components/ui/badge"
+import Footer from "@/components/globals/footer";
+import MaxWidthWrapper from "@/components/wrappers/max-width-wrapper";
+import {
+  Calendar,
+  Clock,
+  ArrowLeft,
+  Coffee,
+  Code,
+  Camera,
+  Lightbulb,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 
 export const metadata = {
   title: "Stories - Sulav Baral",
-  description: "Personal experiences, lessons learned, and insights from my journey as a developer",
-}
+  description:
+    "Personal experiences, lessons learned, and insights from my journey as a developer",
+};
 
 export default function StoriesPage() {
   return (
@@ -16,7 +25,10 @@ export default function StoriesPage() {
       <MaxWidthWrapper>
         {/* Header */}
         <section className="py-10 md:py-20 border-b">
-          <Link href="/" className="inline-flex items-center text-accent-red hover:underline mb-8">
+          <Link
+            href="/"
+            className="inline-flex items-center text-accent-red hover:underline mb-8"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
@@ -28,9 +40,10 @@ export default function StoriesPage() {
             </h1>
 
             <p className="section-p-typography mb-8">
-              Welcome to my little corner of the internet where I share personal experiences, lessons learned, and
-              insights from my journey as a developer. These are the stories behind the code, the challenges that shaped
-              me, and the moments that made it all worthwhile.
+              Welcome to my little corner of the internet where I share personal
+              experiences, lessons learned, and insights from my journey as a
+              developer. These are the stories behind the code, the challenges
+              that shaped me, and the moments that made it all worthwhile.
             </p>
           </div>
         </section>
@@ -39,7 +52,10 @@ export default function StoriesPage() {
         <section className="py-10 md:py-20">
           <div className="max-w-4xl space-y-8 md:space-y-12">
             {stories.map((story, index) => (
-              <article key={index} className="bg-white dark:bg-transparent border rounded-2xl p-6 md:p-8">
+              <article
+                key={index}
+                className="bg-white dark:bg-transparent border rounded-2xl p-6 md:p-8"
+              >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-accent-red/10 rounded-full flex items-center justify-center">
                     <story.icon className="w-5 h-5 text-accent-red" />
@@ -54,7 +70,9 @@ export default function StoriesPage() {
                   </Badge>
                 </div>
 
-                <h2 className="sub-section-title-typography mb-4">{story.title}</h2>
+                <h2 className="sub-section-title-typography mb-4">
+                  {story.title}
+                </h2>
 
                 <div className="space-y-4">
                   {story.content.map((paragraph, idx) => (
@@ -81,20 +99,25 @@ export default function StoriesPage() {
         {/* CTA */}
         <section className="py-10 md:py-20 border-t">
           <div className="text-center max-w-2xl mx-auto">
-            <h3 className="sub-section-title-typography mb-4">Want to Share Your Story?</h3>
+            <h3 className="sub-section-title-typography mb-4">
+              Want to Share Your Story?
+            </h3>
             <p className="section-p-typography mb-6">
-              I love connecting with fellow developers and hearing about their journeys. If you have a story to share or
-              just want to chat about code, coffee, or cameras, let's connect!
+              I love connecting with fellow developers and hearing about their
+              journeys. If you have a story to share or just want to chat about
+              code, coffee, or cameras, let&apos;s connect!
             </p>
             <Link href="#contact">
-              <Button className="bg-accent-red hover:bg-accent-red/90 text-white">Let's Connect</Button>
+              <Button className="bg-accent-red hover:bg-accent-red/90 text-white">
+                Let&apos;s Connect
+              </Button>
             </Link>
           </div>
         </section>
       </MaxWidthWrapper>
       <Footer />
     </main>
-  )
+  );
 }
 
 const stories = [
@@ -149,7 +172,8 @@ const stories = [
       "I realized that teaching isn't about being the smartest person in the room. It's about breaking down complex concepts, being patient, and celebrating small wins. These are the same skills that make you a better team member and communicator.",
       "Now I try to mentor junior developers whenever I can. It keeps me grounded and constantly learning, because explaining something to someone else is the best way to truly understand it yourself.",
     ],
-    lesson: "Teaching others is one of the best ways to solidify your own knowledge and give back to the community.",
+    lesson:
+      "Teaching others is one of the best ways to solidify your own knowledge and give back to the community.",
   },
   {
     icon: Code,
@@ -166,4 +190,4 @@ const stories = [
     lesson:
       "The transition from student to professional is about more than just technical skills—it's about developing a professional mindset and learning to work effectively with others.",
   },
-]
+];
