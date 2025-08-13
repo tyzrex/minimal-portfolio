@@ -1,0 +1,331 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 0 0% 13%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 0, 0%, 13%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 0, 0%, 13%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --text-gradient: linear-gradient(180deg, #000000, #363636);
+    --radius: 0.5rem;
+    --accent-color: #de443e;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 93%;
+
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0, 0%, 13%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 13%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --text-gradient: linear-gradient(180deg, #fff, #adadad);
+    --accent-color: linear-gradient(180deg, #de443e, #ea2d27);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-averta);
+  }
+}
+
+.text-gradient {
+  background: var(--text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.averta-semibold {
+  font-family: var(--font-averta-semibold);
+}
+
+.averta-bold {
+  font-family: var(--font-averta-bold);
+}
+
+@layer components {
+  .hero-typography {
+    @apply text-4xl md:text-6xl xl:text-6xl xl:leading-tight text-start;
+    font-family: var(--font-averta-bold);
+  }
+
+  .hero-typography-normal {
+    @apply text-3xl md:text-6xl;
+  }
+
+  .section-title-typography {
+    @apply text-2xl md:text-4xl xl:text-5xl uppercase mb-5 md:mb-10;
+    font-family: var(--font-averta-bold);
+  }
+
+  .section-p-typography {
+    @apply text-sm leading-relaxed md:text-xl md:leading-8 text-gray-600 dark:text-gray-300;
+  }
+
+  .sub-section-title-typography {
+    @apply text-lg md:text-2xl xl:text-3xl mb-2 md:mb-5;
+    font-family: var(--font-averta-semibold);
+  }
+}
+
+body {
+  transition: background-color 0.4s, color 0.4s, border 0.4s;
+}
+
+@media (min-width: 1920px) {
+  body {
+    max-width: 1920px;
+    margin: auto;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 0.8s infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* GitHub contribution grid styling */
+.box-0-0,
+.box-0-1,
+.box-0-2,
+.box-0-3,
+.box-0-4,
+.box-0-5,
+.box-0-6,
+.box-1-3,
+.box-2-3,
+.box-3-3,
+.box-4-3,
+.box-5-3,
+.box-6-3,
+.box-7-3 {
+  background: var(--accent-color);
+}
+
+.box-0-10,
+.box-1-10,
+.box-2-10,
+.box-3-10,
+.box-3-11,
+.box-3-12,
+.box-3-13,
+.box-3-14,
+.box-0-15,
+.box-1-15,
+.box-2-15,
+.box-3-15,
+.box-4-15,
+.box-5-15,
+.box-6-15,
+.box-6-10,
+.box-6-11,
+.box-6-12,
+.box-6-13,
+.box-6-14 {
+  background: var(--accent-color);
+}
+
+.box-2-22,
+.box-1-23,
+.box-3-21,
+.box-4-20,
+.box-5-19,
+.box-1-24,
+.box-2-23,
+.box-3-22,
+.box-4-21,
+.box-5-20,
+.box-0-19,
+.box-0-20,
+.box-0-21,
+.box-0-22,
+.box-0-23,
+.box-0-24,
+.box-6-19,
+.box-6-20,
+.box-6-21,
+.box-6-22,
+.box-6-23,
+.box-6-24 {
+  background: var(--accent-color);
+}
+
+.box-0-28,
+.box-1-28,
+.box-2-28,
+.box-3-28,
+.box-4-28,
+.box-5-28,
+.box-6-28,
+.box-0-29,
+.box-0-30,
+.box-0-31,
+.box-0-32,
+.box-0-33,
+.box-1-33,
+.box-2-33,
+.box-3-33,
+.box-5-28,
+.box-6-28,
+.box-3-29,
+.box-3-30,
+.box-3-31,
+.box-3-32,
+.box-3-29,
+.box-4-30,
+.box-5-31,
+.box-6-32,
+.box-6-33,
+.box-5-32,
+.box-4-31 {
+  background: var(--accent-color);
+}
+
+.box-0-37,
+.box-1-37,
+.box-2-37,
+.box-3-37,
+.box-4-37,
+.box-5-37,
+.box-6-37,
+.box-0-38,
+.box-0-39,
+.box-0-40,
+.box-0-41,
+.box-3-38,
+.box-3-39,
+.box-3-40,
+.box-3-41,
+.box-6-38,
+.box-6-39,
+.box-6-40,
+.box-6-41 {
+  background: var(--accent-color);
+}
+
+.box-0-44,
+.box-0-45,
+.box-1-46,
+.box-2-47,
+.box-3-48,
+.box-4-49,
+.box-5-50,
+.box-6-51,
+.box-1-45,
+.box-2-46,
+.box-3-47,
+.box-4-48,
+.box-5-49,
+.box-6-50,
+.box-0-41,
+.box-0-51,
+.box-1-50,
+.box-2-49,
+.box-3-48,
+.box-4-47,
+.box-5-46,
+.box-6-45,
+.box-0-50,
+.box-1-49,
+.box-2-48,
+.box-3-47,
+.box-4-46,
+.box-5-45,
+.box-6-44 {
+  background: var(--accent-color);
+}
+
+/* Hide scrollbar */
+.no-scroll-bar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom grid for GitHub contributions */
+.grid-cols-52 {
+  grid-template-columns: repeat(52, minmax(0, 1fr));
+}

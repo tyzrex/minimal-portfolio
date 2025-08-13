@@ -1,24 +1,28 @@
-import type { Metadata } from "next";
-import "./globals.scss";
-import localFont from "next/font/local";
-import ColorModeProvider from "@/provider/ThemeProvider";
-import Navbar from "@/components/globals/navbar";
-import LenisWrapper from "@/components/wrappers/lenis-wrapper";
+import type React from "react"
+import type { Metadata } from "next"
+import "./globals.css"
+import localFont from "next/font/local"
+import ColorModeProvider from "@/provider/ThemeProvider"
+import Navbar from "@/components/globals/navbar"
+import LenisWrapper from "@/components/wrappers/lenis-wrapper"
 
 const averta = localFont({
   src: "../fonts/averta/id-averta-2.woff",
   variable: "--font-averta",
-});
+  display: "swap",
+})
 
 const avertaSemibold = localFont({
   src: "../fonts/averta/id-averta-1.woff",
   variable: "--font-averta-semibold",
-});
+  display: "swap",
+})
 
 const avertaBold = localFont({
   src: "../fonts/averta/id-averta-3.woff",
   variable: "--font-averta-bold",
-});
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Sulav Baral",
@@ -40,24 +44,16 @@ export const metadata: Metadata = {
     "NodeJS Developer",
     "NodeJS",
   ],
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body
-        className={
-          averta.variable +
-          " " +
-          avertaSemibold.variable +
-          " " +
-          avertaBold.variable
-        }
-      >
+      <body className={`${averta.variable} ${avertaSemibold.variable} ${avertaBold.variable}`}>
         <LenisWrapper>
           <ColorModeProvider>
             <Navbar />
@@ -66,5 +62,5 @@ export default function RootLayout({
         </LenisWrapper>
       </body>
     </html>
-  );
+  )
 }

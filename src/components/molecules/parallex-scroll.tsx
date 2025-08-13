@@ -1,69 +1,68 @@
-"use client";
-import { useEffect, useRef, useState, useMemo, useCallback } from "react";
-import Image from "next/image";
-import { useTransform, useScroll, motion } from "framer-motion";
-import styles from "./menu.module.scss";
+"use client"
+import { useEffect, useRef, useState, useMemo, useCallback } from "react"
+import Image from "next/image"
+import { useTransform, useScroll, motion } from "framer-motion"
 
 interface ScrollGalleryProps {
   images: {
-    url: string;
-  }[];
+    url: string
+  }[]
 }
 
 const ScrollGallery = (props: ScrollGalleryProps) => {
-  const { images } = props;
-  const gallery = useRef<HTMLDivElement>(null);
-  const [dimension, setDimension] = useState({ width: 0, height: 0 });
-  const [visibleImages, setVisibleImages] = useState(new Set());
+  const { images } = props
+  const gallery = useRef<HTMLDivElement>(null)
+  const [dimension, setDimension] = useState({ width: 0, height: 0 })
+  const [visibleImages, setVisibleImages] = useState(new Set())
 
   const { scrollYProgress } = useScroll({
     target: gallery,
     offset: ["start end", "end start"],
-  });
+  })
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, dimension.height * 2]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, dimension.height * 3.3]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, dimension.height * 1]);
-  const y4 = useTransform(scrollYProgress, [0, 1], [0, dimension.height * 3]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, dimension.height * 2])
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, dimension.height * 3.3])
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, dimension.height * 1])
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, dimension.height * 3])
 
   useEffect(() => {
     const resize = () => {
-      setDimension({ width: window.innerWidth, height: window.innerHeight });
-    };
+      setDimension({ width: window.innerWidth, height: window.innerHeight })
+    }
 
-    window.addEventListener("resize", resize);
-    resize();
+    window.addEventListener("resize", resize)
+    resize()
 
-    return () => window.removeEventListener("resize", resize);
-  }, []);
+    return () => window.removeEventListener("resize", resize)
+  }, [])
 
-  const firstPart = useMemo(() => images.slice(0, 7), [images]);
-  const secondPart = useMemo(() => images.slice(8, 14), [images]);
-  const thirdPart = useMemo(() => images.slice(15, 21), [images]);
-  const fourthPart = useMemo(() => images.slice(22, 29), [images]);
+  const firstPart = useMemo(() => images.slice(0, 7), [images])
+  const secondPart = useMemo(() => images.slice(8, 14), [images])
+  const thirdPart = useMemo(() => images.slice(15, 21), [images])
+  const fourthPart = useMemo(() => images.slice(22, 29), [images])
 
   const handleIntersection = useCallback((entries: any) => {
     entries.forEach((entry: any) => {
       if (entry.isIntersecting) {
-        setVisibleImages((prev) => new Set(prev).add(entry.target.dataset.src));
+        setVisibleImages((prev) => new Set(prev).add(entry.target.dataset.src))
       }
-    });
-  }, []);
+    })
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
       root: null,
       rootMargin: "0px",
       threshold: 0.1,
-    });
+    })
 
-    const imageElements = document.querySelectorAll("[data-src]");
-    imageElements.forEach((el) => observer.observe(el));
+    const imageElements = document.querySelectorAll("[data-src]")
+    imageElements.forEach((el) => observer.observe(el))
 
     return () => {
-      imageElements.forEach((el) => observer.unobserve(el));
-    };
-  }, [handleIntersection]);
+      imageElements.forEach((el) => observer.unobserve(el))
+    }
+  }, [handleIntersection])
 
   return (
     <>
@@ -82,7 +81,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               data-src={el.url}
             >
               <Image
-                src={el.url}
+                src={el.url || "/placeholder.svg"}
                 fill
                 quality={100}
                 className="aspect-[9/16] w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0"
@@ -105,7 +104,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               data-src={el.url}
             >
               <Image
-                src={el.url}
+                src={el.url || "/placeholder.svg"}
                 fill
                 quality={100}
                 className="aspect-[9/16] w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0"
@@ -128,7 +127,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               data-src={el.url}
             >
               <Image
-                src={el.url}
+                src={el.url || "/placeholder.svg"}
                 className="aspect-[9/16] w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0"
                 fill
                 quality={100}
@@ -151,7 +150,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               data-src={el.url}
             >
               <Image
-                src={el.url}
+                src={el.url || "/placeholder.svg"}
                 className="aspect-[9/16] w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0"
                 fill
                 quality={100}
@@ -174,7 +173,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               data-src={el.url}
             >
               <Image
-                src={el.url}
+                src={el.url || "/placeholder.svg"}
                 className="aspect-[9/16] w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0"
                 fill
                 quality={100}
@@ -197,7 +196,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
               data-src={el.url}
             >
               <Image
-                src={el.url}
+                src={el.url || "/placeholder.svg"}
                 className="aspect-[9/16] w-full object-cover object-center rounded-lg gap-10 !m-0 !p-0"
                 fill
                 quality={100}
@@ -211,7 +210,7 @@ const ScrollGallery = (props: ScrollGalleryProps) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ScrollGallery;
+export default ScrollGallery

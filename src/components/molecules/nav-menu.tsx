@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
-import Link, { menuSlide } from "./link";
-import { Button } from "../ui/button";
-import { X } from "lucide-react";
+"use client"
+
+import type React from "react"
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { usePathname } from "next/navigation"
+import Link, { menuSlide } from "./link"
+import { Button } from "../ui/button"
+import { X } from "lucide-react"
 
 const navItems = [
   {
@@ -11,26 +14,34 @@ const navItems = [
     href: "/",
   },
   {
-    title: "Work",
-    href: "/work",
+    title: "Photography",
+    href: "/photography",
   },
   {
-    title: "About",
-    href: "/about",
+    title: "Stories",
+    href: "/stories",
+  },
+  {
+    title: "Projects",
+    href: "/projects", // Updated to new projects page
+  },
+  {
+    title: "Visitors Board", // Added visitors board link
+    href: "/visitors-board",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "/#contact",
   },
-];
+]
 
 export default function NavMenu({
   setIsActive,
 }: {
-  setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsActive: React.Dispatch<React.SetStateAction<boolean>>
 }) {
-  const pathname = usePathname();
-  const [selectedIndicator, setSelectedIndicator] = useState(pathname);
+  const pathname = usePathname()
+  const [selectedIndicator, setSelectedIndicator] = useState(pathname)
 
   return (
     <motion.div
@@ -43,7 +54,7 @@ export default function NavMenu({
       <div className="flex flex-col justify-between h-full px-10 pb-10 md:pb-20 md:px-20 ">
         <div
           onMouseLeave={() => {
-            setSelectedIndicator(pathname);
+            setSelectedIndicator(pathname)
           }}
           className="flex flex-col gap-4 hero-typography-normal"
         >
@@ -53,7 +64,7 @@ export default function NavMenu({
             <Button
               title="Close"
               onClick={() => {
-                setIsActive(false);
+                setIsActive(false)
               }}
               className="p-0 rounded-full"
             >
@@ -67,11 +78,12 @@ export default function NavMenu({
                 data={{ ...data, index }}
                 isActive={selectedIndicator == data.href}
                 setSelectedIndicator={setSelectedIndicator}
+                setIsActive={setIsActive} // Pass setIsActive to close menu on click
               ></Link>
-            );
+            )
           })}
         </div>
       </div>
     </motion.div>
-  );
+  )
 }
