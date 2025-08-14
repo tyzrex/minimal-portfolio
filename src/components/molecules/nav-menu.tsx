@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+"use client";
+
+import type React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Link, { menuSlide } from "./link";
@@ -11,16 +14,24 @@ const navItems = [
     href: "/",
   },
   {
-    title: "Work",
-    href: "/work",
+    title: "Photography",
+    href: "/photography",
   },
   {
-    title: "About",
-    href: "/about",
+    title: "Stories",
+    href: "/stories",
+  },
+  // {
+  //   title: "Projects",
+  //   href: "/projects", // Updated to new projects page
+  // },
+  {
+    title: "Visitors Board", // Added visitors board link
+    href: "/visitors-board",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "/#contact",
   },
 ];
 
@@ -67,6 +78,7 @@ export default function NavMenu({
                 data={{ ...data, index }}
                 isActive={selectedIndicator == data.href}
                 setSelectedIndicator={setSelectedIndicator}
+                setIsActive={setIsActive} // Pass setIsActive to close menu on click
               ></Link>
             );
           })}

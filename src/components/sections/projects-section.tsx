@@ -121,22 +121,6 @@ const projects = [
     images: [Smatch, Smatch1, Smatch],
     className: "order-last",
   },
-  {
-    name: "BlinkedBids",
-    description:
-      "BlinkedBids is a full-stack e-commerce web application that allows users to buy products from various categories. This includes features such as product filtering, sorting, and a shopping cart. The application utilizes modern web technologies including Django and NextJs. We also have integrated esewa payment gateway for the payment system. The platform addresses the need for an accessible, digital solution in the e-commerce market, with a pleasant user interface and a seamless shopping experience.",
-    techs: [
-      "NextJS",
-      "Django",
-      "Esewa",
-      "PostgreSQL",
-      "NextAuth",
-      "ShadcnUI",
-      "TailwindCSS",
-    ],
-    images: [BB2, BB1, BB3],
-    className: "order-first",
-  },
 ];
 
 const minorProjects = [
