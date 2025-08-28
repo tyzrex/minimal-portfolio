@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function StoriesPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pb-20 md:pb-0">
       <MaxWidthWrapper>
         {/* Header */}
         <section className="py-10 md:py-20 border-b">

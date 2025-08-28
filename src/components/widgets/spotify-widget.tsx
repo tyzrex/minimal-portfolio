@@ -20,9 +20,9 @@ export default function SpotifyWidget() {
   if (isLoading) {
     return (
       <div className="relative z-10 w-full xl:max-w-xs xl:px-0">
-        <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
+        <div className="bg-gradient-to-r from-accent-red/10 to-red-600/10 border border-accent-red/20 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
           <div className="flex items-center justify-center">
-            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center animate-pulse">
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-accent-red rounded-full flex items-center justify-center animate-pulse">
               <Music className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
             </div>
             <span className="ml-3 text-sm text-muted-foreground">
@@ -54,28 +54,15 @@ export default function SpotifyWidget() {
 
   // Don't render anything if no track is playing
   if (!currentTrack) {
-    return (
-      <div className="relative z-10 w-full xl:max-w-xs xl:px-0">
-        <div className="bg-gradient-to-r from-gray-500/10 to-gray-600/10 border border-gray-500/20 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
-          <div className="flex items-center justify-center">
-            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gray-500 rounded-full flex items-center justify-center">
-              <Music className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
-            </div>
-            <span className="ml-3 text-sm text-muted-foreground">
-              Not playing anything
-            </span>
-          </div>
-        </div>
-      </div>
-    );
+    return null;
   }
 
   // Render the current track
   return (
     <div className="relative z-10 w-full xl:max-w-xs xl:px-0">
-      <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
+      <div className="bg-gradient-to-r from-accent-red/10 to-red-600/10 border border-accent-red/20 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
         <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-          <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center">
+          <div className="w-6 h-6 sm:w-8 sm:h-8 bg-accent-red rounded-full flex items-center justify-center">
             <Music className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
           </div>
           <div className="flex-1 min-w-0">
@@ -88,15 +75,15 @@ export default function SpotifyWidget() {
                   {/* Floating music note */}
                   <div className="flex items-center gap-0.5">
                     <div
-                      className="w-1 h-1 bg-green-400 rounded-full smooth-pulse"
+                      className="w-1 h-1 bg-accent-red rounded-full smooth-pulse"
                       style={{ animationDelay: "0s" }}
                     ></div>
                     <div
-                      className="w-1 h-1 bg-green-400 rounded-full smooth-pulse"
+                      className="w-1 h-1 bg-accent-red rounded-full smooth-pulse"
                       style={{ animationDelay: "0.3s" }}
                     ></div>
                     <div
-                      className="w-1 h-1 bg-green-400 rounded-full smooth-pulse"
+                      className="w-1 h-1 bg-accent-red rounded-full smooth-pulse"
                       style={{ animationDelay: "0.6s" }}
                     ></div>
                   </div>
@@ -110,7 +97,7 @@ export default function SpotifyWidget() {
                       return (
                         <div
                           key={i}
-                          className="bg-gradient-to-t from-green-600 via-green-500 to-green-400 rounded-full audio-wave"
+                          className="bg-gradient-to-t from-red-600 via-accent-red to-red-400 rounded-full audio-wave"
                           style={{
                             width: "1.5px",
                             minHeight: "3px",
@@ -129,7 +116,7 @@ export default function SpotifyWidget() {
               <div
                 className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${
                   currentTrack.isPlaying
-                    ? "bg-green-500 animate-pulse"
+                    ? "bg-accent-red animate-pulse"
                     : "bg-gray-400"
                 }`}
               ></div>
@@ -166,7 +153,7 @@ export default function SpotifyWidget() {
             <div className="flex items-center gap-2 mt-1">
               <div className="w-[90%] h-0.5 sm:h-1 bg-muted rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-green-500 rounded-full transition-all duration-500"
+                  className="h-full bg-accent-red rounded-full transition-all duration-500"
                   style={{ width: `${getProgressPercentage()}%` }}
                 ></div>
               </div>
@@ -181,7 +168,7 @@ export default function SpotifyWidget() {
             href={currentTrack.spotifyUrl || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors flex-shrink-0"
+            className="w-6 h-6 sm:w-8 sm:h-8 bg-accent-red rounded-full flex items-center justify-center hover:bg-red-600 transition-colors flex-shrink-0"
           >
             <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
           </Link>

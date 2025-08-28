@@ -15,13 +15,23 @@ import MaxWidthWrapper from "@/components/wrappers/max-width-wrapper";
 
 export default function Home() {
   return (
-    <main className="min-h-screen ">
+    <main className="min-h-screen pb-20 md:pb-0">
       <MaxWidthWrapper>
-        <HeroSection />
+        <section id="hero">
+          <HeroSection />
+        </section>
 
-        <AboutSection />
-        <FeaturedWorkSection />
-        <ExperienceSection />
+        <section id="about">
+          <AboutSection />
+        </section>
+
+        <section id="featured">
+          <FeaturedWorkSection />
+        </section>
+
+        <section id="experience">
+          <ExperienceSection />
+        </section>
 
         <div className="py-10 border-b">
           <VelocityScroll
@@ -31,12 +41,29 @@ export default function Home() {
           />
         </div>
 
-        <EducationSection />
-        <SkillSection />
-        <ServicesSection />
-        <ProjectSection />
-        <ContactSection />
-        <Socials />
+        <section id="education">
+          <EducationSection />
+        </section>
+
+        <section id="skills">
+          <SkillSection />
+        </section>
+
+        <section id="services">
+          <ServicesSection />
+        </section>
+
+        <section id="projects">
+          <ProjectSection />
+        </section>
+
+        <section id="contact">
+          <ContactSection />
+        </section>
+
+        <section id="socials">
+          <Socials />
+        </section>
       </MaxWidthWrapper>
       <Footer />
     </main>
