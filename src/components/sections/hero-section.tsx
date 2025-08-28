@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
-import { Sparkles, Briefcase } from "lucide-react";
+import { Sparkles, Briefcase, NotepadText } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -71,7 +71,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col md:flex-row items-center justify-end gap-3">
               <Link prefetch={false} href="#contact" className="w-full">
-                <Button className="w-full text-lg dark:text-white dark:hover:bg-accent-red dark:bg-neutral-800 dark:border  transition-colors duration-300">
+                <Button className="w-full text-sm md:text-lg dark:text-white dark:hover:bg-accent-red dark:bg-neutral-800 dark:border  transition-colors duration-300">
                   <Briefcase className="w-4 h-4 mr-2" />
                   Hire Me
                 </Button>
@@ -82,7 +82,8 @@ export default function HeroSection() {
                 prefetch={false}
                 className="w-full"
               >
-                <Button className="w-full bg-accent-red text-lg text-white hover:bg-accent-red/70 transition-colors duration-300">
+                <Button className="w-full bg-accent-red text-sm md:text-lg text-white hover:bg-accent-red/70 transition-colors duration-300">
+                  <NotepadText className="w-4 h-4 mr-2" />
                   Download CV
                 </Button>
               </Link>

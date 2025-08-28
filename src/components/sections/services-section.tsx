@@ -4,6 +4,7 @@ import SectionHeader from "../reusables/section-header";
 import SectionWrapper from "../wrappers/section-wrapper";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
+import WordBadge from "@/components/atoms/word-badge";
 
 export default function ServicesSection() {
   return (
@@ -31,44 +32,21 @@ export default function ServicesSection() {
           clean code and thoughtful design.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-16 mb-12">
           {services.map((service, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-accent-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div key={index} className="text-left">
+              <div className="w-16 h-16 bg-accent-red/10 rounded-full flex items-center justify-center mb-4">
                 <service.icon className="w-8 h-8 text-accent-red" />
               </div>
               <h3 className="text-lg font-semibold mb-3">{service.title}</h3>
               <p className="section-p-typography mb-4">{service.description}</p>
-              <div className="flex flex-wrap justify-center gap-1">
+              <div className="flex flex-wrap justify-start gap-1">
                 {service.technologies.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded"
-                  >
-                    {tech}
-                  </span>
+                  <WordBadge variant={"light"} key={idx} word={tech} />
                 ))}
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center bg-gradient-to-r from-accent-red/5 to-purple-500/5 rounded-2xl p-8">
-          <h3 className="sub-section-title-typography mb-4">
-            Let&apos;s Work Together
-          </h3>
-          <p className="section-p-typography mb-6 max-w-2xl mx-auto">
-            I&apos;m currently accepting new freelance projects and would love
-            to help you create something amazing. Let&apos;s discuss your ideas
-            and turn them into reality.
-          </p>
-
-          <Link href="#contact">
-            <Button className="bg-accent-red hover:bg-accent-red/90 text-white">
-              Start a Project
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-          </Link>
         </div>
       </div>
     </SectionWrapper>

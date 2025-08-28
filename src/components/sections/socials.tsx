@@ -22,7 +22,7 @@ export default function Socials() {
           clients, and anyone interested in tech and creativity.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {socialLinks.map((social, index) => (
             <Link
               key={index}

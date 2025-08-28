@@ -30,47 +30,33 @@ export default function AboutSection() {
           </div>
 
           <p className="section-p-typography mb-6">
-            Hi there! I&apos;m Sulav, a passionate frontend developer who just
-            completed my Computer Science degree from Tribhuvan University last
-            month. While I&apos;m fresh out of college, I&apos;ve been building
-            real-world applications and gaining professional experience for over
-            two years now.
+            Hey! I&apos;m Sulav, a frontend developer who just graduated from
+            Tribhuvan University but has been building real apps for over two
+            years. I love creating digital experiences that people actually
+            enjoy using—not just pretty websites, but solutions that feel
+            intuitive and solve real problems.
           </p>
 
           <p className="section-p-typography mb-6">
-            What drives me? Creating digital experiences that people actually
-            enjoy using. I believe great websites shouldn&apos;t just look
-            good—they should feel intuitive, load fast, and solve real problems.
-            Whether it&apos;s a sleek business website or a complex web
-            application, I focus on building solutions that make users&apos;
-            lives easier.
-          </p>
-
-          <p className="section-p-typography mb-6">
-            I&apos;m currently working as an Associate Software Engineer at
-            Hamro Patro, where I get to work on products used by millions of
-            Nepali users. But I also love taking on freelance projects because
-            each client brings unique challenges that help me grow as a
-            developer. There&apos;s something special about working directly
-            with clients and seeing their ideas come to life.
+            Currently, I&apos;m working as an Associate Software Engineer at
+            Hamro Patro, building products for millions of users. I also take on
+            freelance projects because there&apos;s something magical about
+            turning someone&apos;s vision into reality and seeing their
+            excitement when it comes to life.
           </p>
 
           <p className="section-p-typography mb-6">
             When I&apos;m not coding, you&apos;ll find me exploring
-            Kathmandu&apos;s cafe scene with my camera, capturing moments that
-            tell stories. I&apos;m also that person who gets genuinely excited
-            about clean code, smooth animations, and finding the perfect color
-            palette for a project. I&apos;ve probably visited every cafe in
-            Thamel while working on projects—good coffee plus good code equals a
-            happy developer!
+            Kathmandu&apos;s cafes with my camera or getting way too excited
+            about clean code and smooth animations. Good coffee + good code =
+            happy developer! ☕
           </p>
 
           <p className="section-p-typography">
-            I&apos;m always open to new opportunities and collaborations.
-            Whether you&apos;re a startup looking for a dedicated developer, a
-            business needing a modern website, or someone with a crazy idea that
-            needs to be built—let&apos;s chat! I believe the best projects come
-            from great conversations and shared enthusiasm.
+            Always open to new opportunities and crazy ideas that need building.
+            Whether you&apos;re a startup, business, or someone with a wild
+            concept—let&apos;s chat! The best projects start with great
+            conversations.
           </p>
         </div>
       </SectionWrapper>
