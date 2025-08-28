@@ -329,3 +329,67 @@ body {
 .grid-cols-52 {
   grid-template-columns: repeat(52, minmax(0, 1fr));
 }
+
+/* Audio Wave Animation for Spotify Widget */
+@keyframes audioWave {
+  0%,
+  100% {
+    transform: scaleY(0.2);
+    opacity: 0.6;
+  }
+  25% {
+    transform: scaleY(0.8);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scaleY(1.2);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleY(0.6);
+    opacity: 0.8;
+  }
+}
+
+/* Smooth pulsing dots */
+@keyframes smoothPulse {
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.7;
+  }
+  33% {
+    transform: scale(1.3) translateY(-1px);
+    opacity: 1;
+  }
+  66% {
+    transform: scale(0.9) translateY(1px);
+    opacity: 0.8;
+  }
+}
+
+/* Floating animation for music notes */
+@keyframes floatNote {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-2px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.audio-wave {
+  animation: audioWave ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.smooth-pulse {
+  animation: smoothPulse ease-in-out infinite;
+}
+
+.float-note {
+  animation: floatNote 2.5s ease-in-out infinite;
+}

@@ -2,13 +2,16 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Sparkles, Briefcase, NotepadText } from "lucide-react";
+import SpotifyWidget from "../widgets/spotify-widget";
 
 export default function HeroSection() {
   return (
     <>
-      <section className="h-auto md:border-b ">
+      <section className="h-auto md:border-b">
         <div className="grid grid-cols-1 xl:grid-cols-2">
-          <div className="relative md:border-r-2 p-0 xl:p-10 flex flex-col gap-10 items-center justify-center order-last xl:order-first ">
+          <div className="relative md:border-r-2 p-0 xl:p-6 flex flex-col gap-6 sm:gap-8 xl:gap-10 items-center justify-center order-last xl:order-first min-h-[300px] sm:min-h-[400px] xl:min-h-[500px]">
+            <SpotifyWidget />
+
             <div className="grid grid-cols-2 xl:grid-rows-2 w-full h-full xl:absolute xl:top-0 xl:left-0 xl:-z-10">
               <div className="border-r-2 border-b-2 h-full w-full p-5 ">
                 <div className="flex items-center justify-center h-full w-full ">
@@ -43,6 +46,8 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
+
+            {/* Spotify Now Playing Widget */}
           </div>
           <div className="flex flex-col gap-10 xl:p-20 my-10 xl:my-0">
             <div className="flex flex-col xl:mx-auto">

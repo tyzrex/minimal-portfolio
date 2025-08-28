@@ -7,9 +7,9 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
 export const metadata = {
-  title: "Photography - Sulav Baral",
+  title: "Travel Photography - Sulav Baral",
   description:
-    "Explore my photography journey - capturing moments, stories, and emotions through my lens",
+    "Join my travel adventures through mobile photography and short videos - exploring Nepal and beyond, one destination at a time",
 };
 
 export default function PhotographyPage() {
@@ -32,50 +32,52 @@ export default function PhotographyPage() {
 
             <h1 className="hero-typography mb-8">
               <span className="text-gradient">
-                capturing life through my lens
+                adventures through a phone lens
               </span>
               <span className="text-accent-red">.</span>
             </h1>
 
-            <p className="section-p-typography max-w-4xl mx-auto mb-8">
-              Photography isn&apos;t just a hobby for me—it&apos;s a way to
-              freeze moments in time and tell stories without words. From the
-              bustling streets of Kathmandu to serene mountain landscapes, from
-              intimate cafe moments to vibrant cultural celebrations, I capture
-              the essence of life as I see it.
+            <p className="section-p-typography max-w-4xl mx-auto mb-8 text-center md:text-center">
+              Adventures happen everywhere, and capturing those moments just
+              feels right. From hidden mountain trails to bustling city streets,
+              every journey becomes a collection of stories—frozen moments and
+              short clips that bring places to life and hopefully inspire others
+              to explore.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-accent-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Eye className="w-8 h-8 text-accent-red" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">My Perspective</h3>
-                <p className="section-p-typography">
-                  Every photo tells a story. I focus on capturing authentic
-                  emotions and genuine moments that resonate with viewers.
-                </p>
-              </div>
-
-              <div className="text-center">
+              <div className="text-center md:text-center">
                 <div className="w-16 h-16 bg-accent-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-8 h-8 text-accent-red" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Local Explorer</h3>
+                <h3 className="text-lg font-semibold mb-2">Adventure Calls</h3>
                 <p className="section-p-typography">
-                  From hidden cafes in Thamel to sunrise views from Nagarkot, I
-                  explore Nepal&apos;s beauty through my camera.
+                  Every destination has stories waiting to unfold. From
+                  Nepal&apos;s hidden gems to new horizons beyond.
                 </p>
               </div>
 
-              <div className="text-center">
+              <div className="text-center md:text-center">
                 <div className="w-16 h-16 bg-accent-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="w-8 h-8 text-accent-red" />
+                  <Camera className="w-8 h-8 text-accent-red" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Daily Moments</h3>
+                <h3 className="text-lg font-semibold mb-2">
+                  Capturing Moments
+                </h3>
                 <p className="section-p-typography">
-                  I believe extraordinary moments exist in ordinary days. My
-                  photos capture the beauty in everyday life.
+                  Those perfect spontaneous shots that happen when you least
+                  expect them. Simple, authentic captures of real experiences.
+                </p>
+              </div>
+
+              <div className="text-center md:text-center">
+                <div className="w-16 h-16 bg-accent-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Eye className="w-8 h-8 text-accent-red" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Visual Stories</h3>
+                <p className="section-p-typography">
+                  Mixing photos with short videos to share the full experience—
+                  the sounds, energy, and feeling of being there.
                 </p>
               </div>
             </div>
@@ -87,64 +89,38 @@ export default function PhotographyPage() {
 
         {/* Bottom Section */}
         <section className="py-20 border-b">
-          <div className="text-center mb-12">
+          <div className="text-center md:text-center mb-12">
             <h2 className="section-title-typography mb-8">
-              <span className="text-gradient">behind the camera</span>
+              <span className="text-gradient">wanderlust & pixels</span>
               <span className="text-accent-red">.</span>
             </h2>
 
             <div className="max-w-4xl mx-auto">
-              <p className="section-p-typography mb-8">
-                My photography journey started with a simple smartphone and an
-                eye for interesting compositions. Over the years, I&apos;ve
-                developed my skills using both my trusty 10-year-old camera and
-                modern smartphone technology. What matters most isn&apos;t the
-                equipment—it&apos;s the story behind each shot.
+              <p className="section-p-typography mb-8 text-left">
+                There&apos;s something magical about being in a new place and
+                feeling that urge to capture a moment—whether it&apos;s the way
+                morning light hits ancient temples, the chaos and energy of
+                local markets, or those quiet mountain mornings that make you
+                forget about everything else. Adventure calls, and documenting
+                these experiences just feels natural.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-white dark:bg-transparent border rounded-2xl p-6">
-                  <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <Camera className="w-5 h-5 mr-2 text-accent-red" />
-                    My Equipment
-                  </h3>
-                  <ul className="section-p-typography space-y-2">
-                    <li>• 10-year-old DSLR camera (still going strong!)</li>
-                    <li>• Smartphone photography for spontaneous moments</li>
-                    <li>• Natural lighting enthusiast</li>
-                    <li>• Minimal post-processing approach</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white dark:bg-transparent border rounded-2xl p-6">
-                  <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <Heart className="w-5 h-5 mr-2 text-accent-red" />
-                    What I Love Capturing
-                  </h3>
-                  <ul className="section-p-typography space-y-2">
-                    <li>• Cafe culture and coffee moments</li>
-                    <li>• Street photography and urban life</li>
-                    <li>• Travel and landscape photography</li>
-                    <li>• Candid portraits and emotions</li>
-                  </ul>
-                </div>
-              </div>
-
-              <p className="section-p-typography mb-8">
-                Each photo in this collection represents a moment that caught my
-                attention—whether it&apos;s the golden hour light streaming
-                through a cafe window, the vibrant colors of a local festival,
-                or the quiet beauty of a mountain sunrise. Photography has
-                taught me to slow down, observe, and appreciate the world around
-                me.
+              <p className="section-p-typography mb-8 text-left">
+                Every trip tells a different story. Weekend escapes to Pokhara,
+                challenging treks through the Himalayas, or discovering hidden
+                gems in bustling cities—each adventure brings moments worth
+                remembering. These experiences turn into visual stories that
+                hopefully inspire others to pack their bags and create their own
+                adventures.
               </p>
 
-              <p className="section-p-typography mb-12">
-                I also create short reels and stories about my photography
-                adventures, sharing behind-the-scenes moments and the stories
-                behind my favorite shots. It&apos;s not just about the final
-                image—it&apos;s about the entire experience of being present in
-                the moment.
+              <p className="section-p-typography mb-12 text-left">
+                The best part? Those unplanned moments that become the most
+                memorable—stumbling upon a local festival, catching a perfect
+                sunset from an unexpected viewpoint, or meeting incredible
+                people who share stories over chai. These spontaneous
+                discoveries are what make traveling so addictive and worth
+                documenting.
               </p>
             </div>
 
@@ -155,7 +131,7 @@ export default function PhotographyPage() {
               >
                 <Button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600">
                   <Instagram className="h-5 w-5 mr-2" />
-                  Follow My Photography Journey
+                  Travel Adventures
                 </Button>
               </Link>
 
@@ -165,7 +141,7 @@ export default function PhotographyPage() {
                   className="border-accent-red text-accent-red hover:bg-accent-red hover:text-white bg-transparent"
                 >
                   <Camera className="h-5 w-5 mr-2" />
-                  Behind the Scenes
+                  Short Videos & Reels
                 </Button>
               </Link>
             </div>
