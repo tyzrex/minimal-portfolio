@@ -4,6 +4,7 @@ import AboutSection from "@/components/sections/about-section";
 import ContactSection from "@/components/sections/contact-section";
 import EducationSection from "@/components/sections/education-section";
 import ExperienceSection from "@/components/sections/experience-section";
+import FeaturedWorkSection from "@/components/sections/featured-work";
 import HeroSection from "@/components/sections/hero-section";
 import { Photos } from "@/components/sections/parallex-photos";
 import ProjectSection from "@/components/sections/projects-section";
@@ -19,6 +20,7 @@ export default function Home() {
         <HeroSection />
 
         <AboutSection />
+        <FeaturedWorkSection />
         <ExperienceSection />
 
         <div className="py-10 border-b">
