@@ -54,7 +54,20 @@ export default function SpotifyWidget() {
 
   // Don't render anything if no track is playing
   if (!currentTrack) {
-    return null;
+    return (
+      <div className="relative z-10 w-full xl:max-w-xs xl:px-0">
+        <div className="bg-gradient-to-r from-gray-500/10 to-gray-600/10 border border-gray-500/20 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
+          <div className="flex items-center justify-center">
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gray-500 rounded-full flex items-center justify-center">
+              <Music className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+            </div>
+            <span className="ml-3 text-sm text-muted-foreground">
+              Not playing anything
+            </span>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   // Render the current track
