@@ -59,7 +59,7 @@ export default function SpotifyWidget() {
 
   // Render the current track
   return (
-    <div className="relative z-10 w-full xl:max-w-xs xl:px-0">
+    <div className="relative z-10 w-full xl:max-w-md xl:px-0">
       <div className="bg-gradient-to-r from-accent-red/10 to-red-600/10 border border-accent-red/20 rounded-xl p-3 sm:p-4 backdrop-blur-sm">
         <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
           <div className="w-6 h-6 sm:w-8 sm:h-8 bg-accent-red rounded-full flex items-center justify-center">
@@ -72,22 +72,6 @@ export default function SpotifyWidget() {
               </p>
               {currentTrack.isPlaying && (
                 <div className="flex items-center justify-center gap-1 h-4 sm:h-5">
-                  {/* Floating music note */}
-                  <div className="flex items-center gap-0.5">
-                    <div
-                      className="w-1 h-1 bg-accent-red rounded-full smooth-pulse"
-                      style={{ animationDelay: "0s" }}
-                    ></div>
-                    <div
-                      className="w-1 h-1 bg-accent-red rounded-full smooth-pulse"
-                      style={{ animationDelay: "0.3s" }}
-                    ></div>
-                    <div
-                      className="w-1 h-1 bg-accent-red rounded-full smooth-pulse"
-                      style={{ animationDelay: "0.6s" }}
-                    ></div>
-                  </div>
-
                   {/* Audio bars */}
                   <div className="ml-1 flex items-end gap-0.5">
                     {[...Array(6)].map((_, i) => {

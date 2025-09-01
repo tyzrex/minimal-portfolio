@@ -9,11 +9,12 @@ import {
   MessageCircle,
   ChevronUp,
 } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const BottomNavigation: React.FC = () => {
   const pathname = usePathname();
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => setShowScrollTop(window.pageYOffset > 300);
@@ -22,30 +23,38 @@ const BottomNavigation: React.FC = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   const nav = [
-    { id: "hero", Icon: Home, action: () => scrollToSection("hero") },
-    { id: "about", Icon: User, action: () => scrollToSection("about") },
+    {
+      id: "hero",
+      Icon: Home,
+      label: "Home",
+      action: () => router.push("/"),
+    },
+    {
+      id: "about",
+      Icon: User,
+      label: "About",
+      action: () => router.push("/#about"),
+    },
     {
       id: "projects",
       Icon: Briefcase,
-      action: () => scrollToSection("projects"),
+      label: "Projects",
+      action: () => router.push("/#projects"),
     },
     {
       id: "photos",
       Icon: Camera,
-      action: () => (window.location.href = "/photography"),
+      label: "Photos",
+      action: () => router.push("/photography"),
     },
     {
       id: "contact",
       Icon: MessageCircle,
-      action: () => scrollToSection("contact"),
+      label: "Contact",
+      action: () => router.push("/#contact"),
     },
   ];
 
@@ -53,7 +62,7 @@ const BottomNavigation: React.FC = () => {
     <>
       {/* Minimal centered pill - visible on small screens only */}
       <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 block md:hidden">
-        <div className="rounded-full bg-white/95 dark:bg-black/95 backdrop-blur-md border border-transparent shadow-lg px-3 py-2">
+        <div className="rounded-full bg-black/95 dark:border dark:border-gray-800 backdrop-blur-md border border-transparent shadow-lg px-3 py-2">
           <div className="flex items-center gap-2">
             {nav.map((item) => {
               const active =
@@ -66,20 +75,24 @@ const BottomNavigation: React.FC = () => {
                   key={item.id}
                   onClick={item.action}
                   aria-label={item.id}
-                  className={`relative p-2 rounded-full transition-all duration-200 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60 ${
+                  className={`relative py-2 px-5 rounded-full transition-all duration-200 flex flex-col items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60 ${
                     active
                       ? "bg-red-600 text-white shadow-md"
-                      : "text-black/70 dark:text-white/70 hover:bg-red-50 dark:hover:bg-red-900/20"
+                      : "bg-black text-white/80 "
                   }`}
                 >
                   <item.Icon
-                    className={`w-4 h-4 ${active ? "text-white" : ""}`}
+                    className={`w-4 h-4 ${
+                      active ? "text-white" : "text-white/80"
+                    }`}
                   />
-
-                  {/* small active indicator under the button */}
-                  {active && (
-                    <span className="absolute -bottom-2 w-2 h-2 bg-white rounded-full shadow-sm" />
-                  )}
+                  <span
+                    className={`mt-1 text-[10px] font-medium ${
+                      active ? "text-white" : "text-white/80"
+                    }`}
+                  >
+                    {item.label}
+                  </span>
                 </button>
               );
             })}
