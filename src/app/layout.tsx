@@ -61,7 +61,6 @@ export default function RootLayout({
           <ColorModeProvider>
             <Navbar />
             {children}
-            <BottomNavigation />
           </ColorModeProvider>
         </LenisWrapper>
       </body>
