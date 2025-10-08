@@ -1,5 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,18 +15,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
-      },
-    });
-
     // Email to you (receiving the contact form)
-    const mailToYou = {
-      from: process.env.GMAIL_USER,
+    const mailToYou = await resend.emails.send({
+      from: "noreply@sulavbaral.com.np",
       to: "sulavbaral58@gmail.com",
       subject: `New Contact Form Submission: ${subject}`,
       html: `
@@ -55,11 +48,12 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-    };
+      replyTo: email,
+    });
 
     // Auto-reply email to the sender
-    const autoReply = {
-      from: process.env.GMAIL_USER,
+    const autoReply = await resend.emails.send({
+      from: "noreply@sulavbaral.com.np",
       to: email,
       subject: "Thank you for contacting me!",
       html: `
@@ -101,14 +95,16 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-    };
-
-    // Send both emails
-    await transporter.sendMail(mailToYou);
-    await transporter.sendMail(autoReply);
+    });
 
     return NextResponse.json(
-      { message: "Email sent successfully" },
+      {
+        message: "Email sent successfully",
+        ids: {
+          notification: mailToYou.data?.id,
+          autoReply: autoReply.data?.id,
+        },
+      },
       { status: 200 }
     );
   } catch (error) {
