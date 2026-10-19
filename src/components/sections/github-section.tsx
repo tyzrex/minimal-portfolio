@@ -65,7 +65,7 @@ export default async function GithubContributions() {
             <GithubBeam />
             <Link href={"https://github.com/tyzrex"} prefetch={false}>
               <div className="flex items-center justify-center gap-2">
-                <p className="text-lg md:text-2xl averta-semibold">
+                <p className="text-xl averta-semibold">
                   Visit Github Profile
                 </p>
                 <ArrowUpRightFromCircle />

@@ -45,20 +45,24 @@ export default function NavMenu({
 
   return (
     <motion.div
+      id="sidebar-navigation"
+      role="navigation"
+      aria-label="Main navigation"
+      data-lenis-prevent
       variants={menuSlide}
       initial="initial"
       animate="enter"
       exit="exit"
-      className="h-screen w-screen xl:w-[40%] bg-primary dark:bg-background fixed top-0 right-0 text-white"
+      className="h-[100dvh] w-[min(90vw,36rem)] xl:w-[40%] overflow-y-auto overscroll-contain bg-neutral-900 dark:bg-background fixed top-0 right-0 z-40 text-white shadow-2xl"
     >
-      <div className="flex flex-col justify-between h-full px-10 pb-10 md:pb-20 md:px-20 ">
+      <div className="flex flex-col justify-between min-h-full px-6 pb-10 md:pb-12 md:px-10 ">
         <div
           onMouseLeave={() => {
             setSelectedIndicator(pathname);
           }}
           className="flex flex-col gap-4 hero-typography-normal"
         >
-          <div className="border-b h-20 md:h-40 flex items-center w-full justify-between mb-20">
+          <div className="border-b h-20 md:h-28 flex items-center w-full justify-between mb-8 md:mb-12">
             <p className="text-2xl">Navigation</p>
 
             <Button

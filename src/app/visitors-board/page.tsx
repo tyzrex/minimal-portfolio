@@ -36,7 +36,7 @@ export default function VisitorsBoardPage() {
   };
 
   return (
-    <main className="min-h-screen pb-20 md:pb-0">
+    <main className="min-h-screen">
       <SectionWrapper>
         {/* Header */}
         <section className="py-20 border-b">

@@ -22,7 +22,7 @@ export default function ExperienceSection() {
 
             <div className="flex flex-col gap-5">
               <div>
-                <p className="text-[16px] md:text-2xl">
+                <p className="text-xl">
                   Associate Software Engineer
                 </p>
                 <p className="text-sm section-p-typography">
@@ -49,7 +49,7 @@ export default function ExperienceSection() {
 
             <div className="flex flex-col gap-5">
               <div>
-                <p className="text-[16px] md:text-2xl">Frontend Developer</p>
+                <p className="text-xl">Frontend Developer</p>
                 <p className="text-sm section-p-typography">
                   September 2024 - July 2025
                 </p>
@@ -76,7 +76,7 @@ export default function ExperienceSection() {
 
             <div className="flex flex-col gap-5">
               <div>
-                <p className="text-[16px] md:text-2xl">
+                <p className="text-xl">
                   Junior Frontend Developer
                 </p>
                 <p className="text-sm section-p-typography">
@@ -103,7 +103,7 @@ export default function ExperienceSection() {
 
             <div className="flex flex-col gap-5">
               <div>
-                <p className="text-[16px] md:text-2xl">
+                <p className="text-xl">
                   NextJS Frontend Developer
                 </p>
                 <p className="text-sm section-p-typography">

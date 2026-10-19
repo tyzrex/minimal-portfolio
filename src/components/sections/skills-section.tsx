@@ -11,7 +11,7 @@ export default function SkillSection() {
         <div className="flex flex-col gap-10">
           <div className="flex flex-col">
             <SectionSubHeader title="Languages and Frameworks" />
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-start mt-2 md:mt-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-x-8 xl:gap-x-12 mt-2 md:mt-3">
               <div className="flex  items-center justify-start flex-wrap gap-2 lg:max-w-2xl">
                 <WordBadge variant={"light"} word="react" />
                 <WordBadge variant={"light"} word="nextjs" />
@@ -48,7 +48,7 @@ export default function SkillSection() {
 
           <div className="flex flex-col">
             <SectionSubHeader title="Tools and Technologies" />
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-start mt-2 md:mt-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-x-8 xl:gap-x-12 mt-2 md:mt-3">
               <div className="flex items-center justify-start flex-wrap gap-2 lg:max-w-2xl">
                 <WordBadge variant={"light"} word="git" />
                 <WordBadge variant={"light"} word="github" />

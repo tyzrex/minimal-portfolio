@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function PhotographyPage() {
   return (
-    <main className="min-h-screen pb-20 md:pb-0">
+    <main className="min-h-screen">
       <MaxWidthWrapper>
         {/* Hero Section */}
         <section className="py-20 border-b">

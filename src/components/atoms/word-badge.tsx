@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const badgeVariants = cva(
-  "border text-xs md:text-sm font-semibold uppercase px-3 py-1 md:py-2 md:px-5 rounded-full",
+  "border text-xs leading-snug font-semibold uppercase px-[clamp(0.625rem,0.5rem+0.25vw,0.875rem)] py-[clamp(0.25rem,0.2rem+0.1vw,0.375rem)] rounded-full",
   {
     variants: {
       variant: {
@@ -27,7 +27,7 @@ export default function WordBadge(props: BadgeProps) {
     <span
       className={cn(
         badgeVariants({ variant: props.variant }),
-        "flex items-center "
+        "inline-flex items-center gap-1.5 max-w-full [&>span]:break-words [&>span]:min-w-0"
       )}
     >
       {props.icon}

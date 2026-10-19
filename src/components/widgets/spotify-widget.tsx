@@ -104,7 +104,7 @@ export default function SpotifyWidget() {
                     : "bg-gray-400"
                 }`}
               ></div>
-              <span className="text-xs sm:text-sm font-medium">Spotify</span>
+              <span className="text-xs font-medium">Spotify</span>
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ export default function SpotifyWidget() {
           </div>
 
           <div className="flex-1 min-w-0">
-            <h4 className="font-semibold text-xs sm:text-sm truncate">
+            <h4 className="font-semibold text-xs truncate">
               {currentTrack.name}
             </h4>
             <p className="text-xs text-muted-foreground truncate">

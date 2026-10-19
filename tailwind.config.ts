@@ -17,6 +17,19 @@ const config = {
       },
     },
     extend: {
+      // Modest growth from phone to desktop; rem bounds preserve browser zoom.
+      fontSize: {
+        xs: ["clamp(0.75rem, 0.725rem + 0.1vw, 0.8125rem)", { lineHeight: "1.5" }],
+        sm: ["clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem)", { lineHeight: "1.5" }],
+        base: ["clamp(1rem, 0.975rem + 0.1vw, 1.0625rem)", { lineHeight: "1.6" }],
+        lg: ["clamp(1rem, 0.9375rem + 0.2vw, 1.125rem)", { lineHeight: "1.5" }],
+        xl: ["clamp(1.125rem, 1rem + 0.4vw, 1.375rem)", { lineHeight: "1.4" }],
+        "2xl": ["clamp(1.25rem, 1.125rem + 0.4vw, 1.5rem)", { lineHeight: "1.3" }],
+        "3xl": ["clamp(1.375rem, 1.125rem + 0.9vw, 2rem)", { lineHeight: "1.25" }],
+        "4xl": ["clamp(1.75rem, 1.375rem + 1vw, 2.25rem)", { lineHeight: "1.2" }],
+        "5xl": ["clamp(1.875rem, 1.5rem + 1.2vw, 2.75rem)", { lineHeight: "1.15" }],
+        "6xl": ["clamp(2rem, 1.625rem + 1.2vw, 3rem)", { lineHeight: "1.15" }],
+      },
       colors: {
         "accent-blue": "#a9daf5",
         "accent-green": "#b3deca",

@@ -26,12 +26,12 @@ export default function MinorProjectCards({
             />
           </div>
           <div className="flex flex-col p-5">
-            <h3 className="text-[16px] md:text-2xl">{name}</h3>
+            <h3 className="text-xl">{name}</h3>
             <div className="my-5 gap-5 flex flex-wrap items-center">
               {techs.map((tech, idx) => (
                 <div
                   key={idx}
-                  className="border p-2 rounded-2xl text-xs md:text-sm font-semibold uppercase"
+                  className="border p-2 rounded-2xl text-xs font-semibold uppercase"
                 >
                   {tech}
                 </div>

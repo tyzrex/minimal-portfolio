@@ -37,32 +37,32 @@
   }
 
   .dark {
-    --background: 0 0% 8%;
+    --background: 0 0% 2%;
     --foreground: 0 0% 93%;
 
-    --card: 0 0% 13%;
+    --card: 0 0% 5%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0, 0%, 13%;
+    --popover: 0 0% 5%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 13%;
 
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 0 0% 8%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 3.7% 15.9%;
+    --muted: 0 0% 8%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 240 3.7% 15.9%;
+    --accent: 0 0% 10%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
     --ring: 240 4.9% 83.9%;
     --text-gradient: linear-gradient(180deg, #fff, #adadad);
     --accent-color: linear-gradient(180deg, #de443e, #ea2d27);
@@ -73,8 +73,18 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-padding-top: 6rem;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      scroll-padding-top: 8rem;
+    }
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-base;
     font-family: var(--font-averta);
   }
 }
@@ -96,25 +106,34 @@
 
 @layer components {
   .hero-typography {
-    @apply text-4xl md:text-6xl xl:text-6xl xl:leading-tight text-start;
+    @apply text-start;
+    font-size: clamp(1.875rem, 1.5rem + 1.2vw, 2.75rem);
+    line-height: 1.15;
     font-family: var(--font-averta-bold);
   }
 
   .hero-typography-normal {
-    @apply text-3xl md:text-6xl;
+    font-size: clamp(1.75rem, 1.375rem + 1.2vw, 2.5rem);
+    line-height: 1.2;
   }
 
   .section-title-typography {
-    @apply text-2xl md:text-4xl xl:text-5xl uppercase mb-5 md:mb-10;
+    @apply uppercase mb-5 md:mb-7;
+    font-size: clamp(1.375rem, 1.125rem + 0.9vw, 2rem);
+    line-height: 1.2;
     font-family: var(--font-averta-bold);
   }
 
   .section-p-typography {
-    @apply text-sm leading-relaxed md:text-xl md:leading-8 text-gray-600 dark:text-gray-300;
+    @apply text-gray-600 dark:text-gray-300;
+    font-size: clamp(1rem, 0.9375rem + 0.2vw, 1.125rem);
+    line-height: 1.65;
   }
 
   .sub-section-title-typography {
-    @apply text-lg md:text-2xl xl:text-3xl mb-2 md:mb-5;
+    @apply mb-2 md:mb-3;
+    font-size: clamp(1.125rem, 1rem + 0.4vw, 1.375rem);
+    line-height: 1.3;
     font-family: var(--font-averta-semibold);
   }
 }
@@ -392,4 +411,22 @@ body {
 
 .float-note {
   animation: floatNote 2.5s ease-in-out infinite;
+}
+
+/* The tall track pins the footer beneath the preceding content. Its shifted
+   bottom equals the reserved footer height, so it adds no trailing scroll area. */
+.footer-reveal {
+  height: var(--footer-height);
+  clip-path: inset(0);
+}
+
+.footer-reveal-track {
+  position: relative;
+  height: calc(100svh + var(--footer-height));
+  top: -100svh;
+}
+
+.footer-reveal-sticky {
+  position: sticky;
+  top: calc(100svh - var(--footer-height));
 }

@@ -87,7 +87,7 @@ const BottomNavigation: React.FC = () => {
                     }`}
                   />
                   <span
-                    className={`mt-1 text-[10px] font-medium ${
+                    className={`mt-1 text-xs font-medium ${
                       active ? "text-white" : "text-white/80"
                     }`}
                   >

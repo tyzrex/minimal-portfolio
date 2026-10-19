@@ -10,8 +10,8 @@ export default function Navbar() {
     <>
       <header className=" flex items-center sticky top-0 bg-white dark:bg-background z-20">
         <MaxWidthWrapper>
-          <nav className="h-20 md:h-40 flex justify-between items-center  w-full border-b">
-            <Link href="/" className="text-4xl md:text-[45px] averta-bold hover:text-accent-red transition-colors">
+          <nav className="h-20 md:h-28 flex justify-between items-center  w-full border-b">
+            <Link href="/" className="text-4xl averta-bold hover:text-accent-red transition-colors">
               {`<sb`}
               <span className="text-accent-red">.</span>
               {`/>`}

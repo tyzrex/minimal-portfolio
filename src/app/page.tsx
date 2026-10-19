@@ -15,7 +15,7 @@ import MaxWidthWrapper from "@/components/wrappers/max-width-wrapper";
 
 export default function Home() {
   return (
-    <main className="min-h-screen pb-20 md:pb-0">
+    <main className="min-h-screen">
       <MaxWidthWrapper>
         <section id="hero">
           <HeroSection />

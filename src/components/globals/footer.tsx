@@ -1,4 +1,9 @@
-import React from "react";
+"use client";
+
+import { type CSSProperties, useEffect, useRef, useState } from "react";
+import { useReducedMotion } from "framer-motion";
+import Link from "next/link";
+import { ArrowUp } from "lucide-react";
 import MaxWidthWrapper from "../wrappers/max-width-wrapper";
 import {
   SiFacebook,
@@ -8,67 +13,94 @@ import {
   SiGithub,
 } from "@icons-pack/react-simple-icons";
 
+const navigation = [
+  { label: "Home", href: "/#hero" },
+  { label: "Projects", href: "/#projects" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
+];
+
+const socials = [
+  { label: "Facebook", href: "https://www.facebook.com/sulav.baral.58/", icon: SiFacebook },
+  { label: "Instagram", href: "https://www.instagram.com/sulav_baral_58/", icon: SiInstagram },
+  { label: "X", href: "https://twitter.com/tyzrex07", icon: SiX },
+  { label: "Email", href: "mailto:sulavbaral58@gmail.com", icon: SiGmail },
+  { label: "GitHub", href: "https://github.com/tyzrex", icon: SiGithub },
+];
+
 export default function Footer() {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [contentHeight, setContentHeight] = useState(0);
+  const [viewportHeight, setViewportHeight] = useState(0);
+  const reducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+    const measure = () => {
+      setContentHeight(content.getBoundingClientRect().height);
+      setViewportHeight(window.innerHeight);
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(content);
+    window.addEventListener("resize", measure);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, []);
+  const reveal = !reducedMotion && contentHeight > 0 && contentHeight <= viewportHeight;
+  const style = { "--footer-height": `${contentHeight}px` } as CSSProperties;
+
   return (
-    <div
-      className="relative h-[800px]"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+    <footer
+      style={style}
+      className={reveal ? "footer-reveal relative" : "relative"}
     >
-      <div className="relative h-[calc(100vh+800px)] -top-[100vh]">
-        <div className="h-[800px] sticky top-[calc(100vh-800px)]">
-          <Content />
+      <div className={reveal ? "footer-reveal-track" : undefined}>
+        <div className={reveal ? "footer-reveal-sticky" : undefined}>
+          <div
+            ref={contentRef}
+            className="relative flex min-h-[min(75svh,50rem)] items-center overflow-hidden bg-neutral-900 dark:bg-background text-white py-10 md:py-14"
+          >
+            <MaxWidthWrapper>
+              <div className="flex flex-col items-center gap-7 md:gap-9">
+                <p className="text-[clamp(3rem,10vw,10rem)] averta-bold leading-[1.05] tracking-tight text-center">
+                  <span>Sulav Baral</span>
+                  <span className="text-accent-red">.</span>
+                </p>
+
+                <nav aria-label="Footer navigation" className="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-8 text-lg">
+                  {navigation.map(({ label, href }) => (
+                    <Link key={label} href={href} className="rounded-sm hover:text-accent-red transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
+                      {label}
+                    </Link>
+                  ))}
+                </nav>
+
+                <div className="flex flex-wrap justify-center gap-3 md:gap-5">
+                  {socials.map(({ label, href, icon: Icon }) => (
+                    <a key={label} href={href} aria-label={label} className="flex size-11 items-center justify-center rounded-full border border-white/20 hover:text-accent-red hover:border-accent-red transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
+                      <Icon size={22} aria-hidden="true" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-10 md:mt-12 flex flex-wrap items-center justify-center gap-x-6 gap-y-4 border-t border-white/10 pt-5 text-xs text-white/50 sm:justify-between">
+                <p>© {new Date().getFullYear()} Sulav Baral</p>
+                <Link href="#" onClick={(event) => {
+                  event.preventDefault();
+                  window.scrollTo({ top: 0, behavior: reducedMotion ? "instant" : "smooth" });
+                }} className="inline-flex items-center gap-1.5 rounded-sm text-white/70 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
+                  Back to top <ArrowUp aria-hidden="true" className="size-3.5" />
+                </Link>
+              </div>
+            </MaxWidthWrapper>
+          </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
-
-function Content() {
-  return (
-    <div className="bg-primary dark:bg-transparent py-8 w-full flex flex-col  justify-center overflow-hidden h-full">
-      <MaxWidthWrapper>
-        <Section2 />
-        <Section1 />
-      </MaxWidthWrapper>
-    </div>
-  );
-}
-
-const Section1 = () => {
-  return (
-    <div>
-      <Nav />
-    </div>
-  );
-};
-
-const Section2 = () => {
-  return (
-    <div className="flex justify-center mb-20">
-      <h1 className="text-[14vw] 2xl:text-[256px] averta-bold leading-[0.8] mt-10 text-white">
-        <span className="dark:text-gradient">Sulav Baral</span>
-        <span className="text-accent-red">.</span>
-      </h1>
-    </div>
-  );
-};
-
-const Nav = () => {
-  return (
-    <div>
-      <div className="text-lg md:text-xl flex flex-row items-center justify-center w-full gap-5 md:gap-10 text-white">
-        <p>Home</p>
-        <p>Projects</p>
-        <p>About</p>
-        <p>Contact</p>
-      </div>
-      <div className="flex flex-row items-center justify-center w-full gap-5 md:gap-10 mt-10">
-        <SiFacebook size={18} className="text-white" />
-        <SiInstagram size={18} className="text-white" />
-        <SiX size={18} className="text-white" />
-        <SiGmail size={18} className="text-white" />
-        <SiGithub size={18} className="text-white" />
-      </div>
-    </div>
-  );
-};
